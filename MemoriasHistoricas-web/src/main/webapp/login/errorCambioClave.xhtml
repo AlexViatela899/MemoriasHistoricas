@@ -1,0 +1,66 @@
+<!DOCTYPE xhtml>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:jsf="http://xmlns.jcp.org/jsf"
+                template="/login/template/templateCambioClave.xhtml">
+    <ui:define name="content" >
+        <div jsf:rendered="#{!inicioSesionBean.cambioClaveCorrecto}" 
+             style="text-align:center;
+             width: 200px;
+             margin-left: 35px !important;">
+            #{inicioSesionBean.info}
+        </div>
+        <br/>
+        <fieldset class="clearfix">
+            <p>
+                <span class="fontawesome-user">
+                </span>
+                <h:inputText value="#{inicioSesionBean.usuarioCambioClave}"
+                             class="form-control"
+                             required="true"
+                             requiredMessage="Campo nombre de usuario, obligatorio."
+                             pt:placeholder="Nombre de Usuario"/>
+            </p>
+            <p>
+                <span class="fontawesome-lock">
+                </span>
+                <h:inputSecret value="#{inicioSesionBean.claveAntigua}" 
+                               class="form-control"
+                               required="true"
+                               requiredMessage="Campo contraseña anterior, obligatorio."
+                               pt:placeholder="Contraseña anterior"/>
+            </p>
+            <p>
+                <span class="fontawesome-lock">
+                </span>
+                <h:inputSecret value="#{inicioSesionBean.nuevaClave}" 
+                               class="form-control"
+                               required="true"
+                               requiredMessage="Campo nueva contraseña, obligatorio."
+                               pt:placeholder="Nueva contraseña"/>
+            </p>
+            <p>
+                <span class="fontawesome-lock">
+                </span>
+                <h:inputSecret value="#{inicioSesionBean.confirmarClave}" 
+                               class="form-control"
+                               required="true"
+                               requiredMessage="Campo confirmar contraseña, obligatorio."
+                               pt:placeholder="Confirmar contraseña"/>
+            </p>
+            <br/>
+            <p style="text-align: center">
+                <h:commandLink style="color: #000000" value="Volver"
+                               action="#{inicioSesionBean.volver}"
+                               immediate="true"/>
+            </p>
+            <br/>
+            <p>
+                <h:commandButton value="Aceptar" action="#{inicioSesionBean.cambiarClave}"/>
+            </p>
+        </fieldset>
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,43 @@
+<!DOCTYPE xhtml>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:jsf="http://xmlns.jcp.org/jsf"
+                template="/login/template/homeTemplateLogin.xhtml" >
+    <ui:define name="content">
+        <div jsf:rendered="#{inicioSesionBean.cambioClaveCorrecto}"
+             style="text-align:center;
+             width: 200px;
+             margin-left: 35px !important;">
+            #{inicioSesionBean.info}
+        </div>
+        <br/>
+        <fieldset class="clearfix">
+            <p>
+                <span class="fontawesome-user">
+                </span>
+                <h:inputText value="#{inicioSesionBean.usuario}"
+                             class="form-control"
+                             pt:placeholder="Nombre de Usuario"/>
+            </p>
+            <p>
+                <span class="fontawesome-lock">
+                </span>
+                <h:inputSecret id="clave"
+                               value="#{inicioSesionBean.clave}" 
+                               class="form-control"
+                               pt:placeholder="Contraseña"/>
+            </p>
+            <br/>
+            <p style="text-align: center">
+                <h:commandLink type="submit" value="Cambiar contraseña"
+                               action="#{inicioSesionBean.irCambiarClave}"/>
+            </p>
+            <br/>
+            <p><h:commandButton value="Ingresar"
+                                action="#{inicioSesionBean.autenticar}"/></p>
+        </fieldset>
+    </ui:define>
+</ui:composition>

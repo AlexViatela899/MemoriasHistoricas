@@ -1,0 +1,538 @@
+/* CSS Document */
+/* ---------- FONTAWESOME ---------- */
+/* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
+/* ---------- http://weloveiconfonts.com/ ---------- */
+@import url(/MemoriasHistoricas-web/resources/css/fuentes.css?family=fontawesome);
+/* ---------- FONTAWESOME ---------- */
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+/* ---------- GENERAL ---------- */
+@media \0screen\,screen\9 {
+    .container {
+        left: 60%;
+        position: absolute;
+        top: 20%;
+        border-radius: 5px 5px 5px 5px;   
+        border:solid 4px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        border-color: #0F0254;
+    }
+    
+    .containerCambioClave {
+        left: 60%;
+        position: absolute;
+        top: 15%;
+        border-radius: 5px 5px 5px 5px;   
+        border:solid 4px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        border-color: #0F0254;
+    }
+    
+    .textoIzq {
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        width:400px;
+    }
+
+    .textoIzq p {
+        color : #7D7873;
+        font-family: arial;
+        font-size: 40px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        line-height: 26.4px;
+    }
+    
+    .textoIzq span {
+        color : #333;
+        font-family: Arial;
+        font-size: px;
+    }
+    
+    #logo {
+        width:100%;
+        text-align:right;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 700px), screen\0{
+    .container {
+        left: 60%;
+        position: absolute;
+        top: 20%;
+        border-radius: 5px 5px 5px 5px;   
+        border:solid 4px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        border-color: #0F0254;
+    }
+    
+    .containerCambioClave {
+        left: 60%;
+        position: absolute;
+        top: 15%;
+        border-radius: 5px 5px 5px 5px;   
+        border:solid 4px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        border-color: #0F0254;
+    }
+    
+    .textoIzq {
+        position: absolute;
+        top: 45%;
+        left: 30%;
+        width:400px;
+    }
+
+    .textoIzq p {
+        color : #7D7873;
+        font-family: arial;
+        font-size: 40px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        line-height: 26.4px;
+    }
+    
+    .textoIzq span {
+        color : #333;
+        font-family: Arial;
+        font-size: px;
+    }
+    
+    #logo {
+        width:100%;
+        text-align:right;
+        padding: 30px;
+    }
+}
+@media (min-width: 200px) and (max-width: 699px) {
+    .container { 	
+        position: absolute;
+        margin:10px;
+        border-radius: 5px 5px 5px 5px;   
+        border:solid 4px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        border-color: #0F0254;
+    }
+
+    .containerCambioClave {
+        position: absolute;
+        margin:10px;
+        border-radius: 5px 5px 5px 5px;   
+        border:solid 4px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        border-color: #0F0254;
+    }
+
+    .textoIzq{
+
+        margin:10%
+    }
+    
+    .textoIzq p {
+        color : #7D7873;
+        font-family: arial;
+        font-size: 40px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        line-height: 26.4px;
+    }
+    .textoIzq span {
+        color : #333;
+        font-family: Arial;
+        font-size: px;
+    }
+    #logo{
+        width:100%;
+        text-align:right;
+        padding: 30px;
+    }
+
+}
+
+h4{
+    text-align:center;
+    width: 200px;
+    margin-left: 35px !important;
+}
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:before, *:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    /*background: url("/MemoriasHistoricas-web/resources/images/sso-bg.jpg");*/
+    background-color: black;
+    color: #606468;
+    font: 87.5%/1.5em 'Open Sans', sans-serif;
+    margin: 0;
+    font-family: Arial !important;
+}
+
+a {
+    color: #eee;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    border: none;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 0;
+    -webkit-appearance: none;
+}
+h1{
+
+    font-family: Arial;
+    font-size: 28px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+    color:#333;
+    text-align:center;
+}
+p {
+    line-height: 1.5em;
+}
+
+.titulo{
+    font-family: Arial;
+    font-size: 28px;
+    color: #7e7974;
+    text-align:center;
+
+}
+
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+    content: ' ';
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+
+
+/* ---------- LOGIN ---------- */
+#login {
+    width: 280px;
+}
+
+
+
+#login span {
+    background-color: #b7b7b7;
+    border-radius: 3px 0px 0px 3px;
+    color: #333;
+    display: block;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+    border: solid 1px;
+    margin-left:35px;
+    border-color: #b7b7b7;
+}
+
+#login input {
+    height: 30px;
+}
+
+#login input[type="text"], input[type="password"] {
+
+    background-color: #fff;
+    border-radius: 0px 3px 3px 0px;
+    color: #83878A;
+    margin-bottom: 1em;
+    padding: 0 16px;
+    width: 200px;
+    border: solid 1px #83878A;
+
+
+
+}
+
+#login  input[type="submit"] {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #0e024e;
+    color: #eee;
+    font-weight: bold;
+    margin-bottom: 2em;
+    text-trans: uppercase;
+    width: 230px;
+    margin-left:35px;
+}
+
+
+#login  input[type="submit"]:hover {
+    background-color: #100163;
+}
+
+#login > p {
+    text-align: center;
+}
+
+#login > p span {
+    /*padding-left: 5px;*/
+}
+
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+.styleConmandLink {
+
+    color: #000;
+    font-weight: 700;
+    text-shadow: -4px -4px 4px #aaa
+
+}
+
+#titulo h1{
+    color:#CCCCCC;
+    text-align: right;
+    margin: 0px;
+}
+
+#titulo h1 span{
+    color:black;
+}
+
+h2{  
+    background: #E9E9E9 url(../images/titlebar_bg.png) repeat-x right top;
+    font-weight: bold;
+    font-size: 14px;
+    margin:0px 0 15px 0;    
+    padding: 4px;
+    border-left: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    text-align: center;
+
+}
+
+
+#logo {
+    padding: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+
+
+#titulo{
+    padding: 15px;
+    width:80%;
+    position: relative;
+    display: inline-block;
+}
+
+
+#contenido{
+    background: #F7F7F7;
+    padding: 15px;
+}
+
+#principal{
+    border-radius: 0.5em;
+    margin: 0.25em auto;
+    min-height:400px;
+    vertical-align:top;
+    margin-top: 20px;
+
+
+}
+
+
+footer{    
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width:100%;
+
+}
+
+footer, #content:after {    
+    height: 36px; 
+}
+
+
+
+footer span{   
+    color: white; 
+    display:block;    
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;   
+    text-align: center;
+    border-radius: 5px;
+    background: #d52b1e none repeat scroll 0 0;
+}
+
+
+.txtCamposReqMgl{
+    font-weight: bold;  
+    color: red;
+    font-size: medium;
+    padding-left: 5px;
+}
+
+
+
+.black_overlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: initial;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+.white_content {
+    display: none;
+    position: fixed;
+    margin: 12% 0 0 19%;
+    width: 60%;
+    height: 300;
+    padding: 16px;
+    border: 1px solid #d52b1e;
+    background-color: white;
+    z-index:1002;
+    border-radius: 20px;
+
+    overflow: auto;
+}
+
+
+
+.black_overlayError{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: initial;
+    z-index:1010;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+.white_contentError {
+    width: 400px;
+    height: 250px;
+    display: none;
+    position: fixed;
+    margin: 15% 0 0 32%;
+    padding: 10px;
+    border: 1px solid #d52b1e;
+    background-color: white;
+    z-index:1020;
+    border-radius: 20px;
+    overflow: auto;
+
+}
+
+.infoMessage{
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:3px 36px;
+    margin:2px;
+    list-style: none;
+    /*width: 700px;
+    /*border: 1px solid #D8D8D8;*/
+    /*text-transform: uppercase;
+    background-color: rgb(255, 249, 242);*/
+    background:#e3f7fc url('/resources/images/notice.png') no-repeat 10px 50%;
+    border:1px solid #8ed9f6;
+    /*color: red !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;*/
+
+}
+
+.errorMessage{
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:3px 36px;
+    margin:2px;
+    list-style: none;
+    /*width: 700px;
+    /*border: 1px solid #D8D8D8;*/
+    /*text-transform: uppercase;
+    background-color: rgb(255, 249, 242);*/
+    background:#ffecec url('/resources/images/error.png') no-repeat 10px 50%;
+    border:1px solid #f5aca6;
+    /*color: red !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;*/
+}
+
+.warnMessage{
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:3px 36px;
+    margin:2px;
+    list-style: none;
+    background:#fff8c4 url('/resources/images/warning.png') no-repeat 10px 50%;
+    border:1px solid #f2c779;
+}
+
+.successMessage{
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:3px 36px;
+    margin:2px;
+    list-style: none;
+    background:#e9ffd9 url('/resources/images/success.png') no-repeat 10px 50%;
+    border:1px solid #a6ca8a;
+}
+
+.iframe, .contenidoMenu {
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 500px;
+    top: 30px;
+}

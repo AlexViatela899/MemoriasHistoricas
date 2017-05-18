@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"/>
+        <h:outputStylesheet name="style.css" library="css" />
+        <title>Memorias Históricas</title>
+        <h:outputStylesheet name="reset.css" library="css" />
+        <h:outputScript name="memoriasHistoricas.js" library="js" />
+        <h:outputScript name="sha1.js" library="js" />
+        <h:outputScript name="selectivizr-min.js" library="js" />
+        <h:outputScript name="respond.js" library="js" />
+        
+    </h:head>
+    <h:body class="body">
+        <h:panelGroup id="pMessages" rendered="#{not empty facesContext.messageList}">
+            <div id="light" class="white_contentError" style="display : block; margin-right: 100%">
+                <a href = "javascript:void(0)"
+                   onclick = "document.getElementById('light').style.display = 'none';
+                           document.getElementById('fade').style.display = 'none'"
+                   style="margin-left: 97%">
+                    <img src="${facesContext.externalContext.requestContextPath}/resources/images/error.png" height="14px"  width="14px"/>
+                </a>
+                <BR/><BR/>
+                <div id="marcoAuditoria" style="overflow: auto;max-height: 200px">
+                    <h:messages id="messagesPop" globalOnly="false" errorClass="errorMessage" infoClass="infoMessage" warnClass="warnMessage" fatalClass="successMessage"/>
+                </div>
+            </div>
+            <div id="fade" class="black_overlayError" style="display : block;"></div>
+        </h:panelGroup>  
+        <div class="textoIzq">
+            <p>Memorias</p>
+            <br/>
+            <span>Históricas</span>
+        </div>
+        <div> <img src="/MemoriasHistoricas-web/resources/images/logo.png"
+                   style="width: 60%;position: relative;opacity: 0.5;"/>
+        </div>
+        <div class="container">
+            <div id="login">
+                <h1><u><b class="titulo">Bienvenido</b></u></h1>
+                <br/>
+                <br/>
+                <h:form prependId="false">
+                    <ui:insert name="content">
+                    </ui:insert>
+                </h:form>
+            </div>
+        </div>
+        <script>
+                function cifrar(idCifrar){
+                    var input_pass = document.getElementById(idCifrar);
+                    input_pass.value = sha1(input_pass.value);
+                }
+        </script>
+    </h:body>
+</html>

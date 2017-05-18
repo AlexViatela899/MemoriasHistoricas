@@ -1,0 +1,840 @@
+/* 
+    Document   : pdg-style
+    Created on : 17/02/2016, 10:21:01 AM
+    Author     : Jose Carlos Vargas Diaz
+    Description:
+        Hoja de estilos para Predigitacion
+*/
+
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+body, html {
+    height: 100%;
+}
+form{
+    min-height: 100%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+h1{
+    color:#CCCCCC;
+}
+
+h1 span{
+    color:black;
+}
+h3{
+    color:#CCCCCC;
+}
+
+h3 span{
+    color:black;
+}
+
+h2{  
+    
+    background: #E9E9E9 url(../images/titlebar_bg.png) repeat-x right top;
+    font-weight: bold;
+    font-size: 14px;
+    margin:0px 0 10px 0;    
+    padding: 4px;
+    border-left: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+
+}
+
+
+root { 
+    display: block;
+}
+
+#content{    
+    
+    background: #F7F7F7;
+    background-image: -webkit-linear-gradient(top, #F7F7F7, #fff)  !important;
+    background-image: -moz-linear-gradient(top, #F7F7F7, #fff)  !important;
+    background-image: -ms-linear-gradient(top, #F7F7F7, #fff)  !important;
+    background-image: -o-linear-gradient(top, #F7F7F7, #fff)  !important;
+    background-image: linear-gradient(bottom, #F7F7F7, #fff)  !important;
+    /*border-left: solid 1px grey;
+    border-right: solid 1px grey;*/
+    margin: 20px 200px -36px ;
+    min-height: 100%;
+    padding: 10px;
+    width:1010px;
+
+    margin-bottom: -36px; 
+}
+#content:after {
+    content: "";
+    display: block;
+}
+#footer, #content:after {    
+    height: 36px; 
+}
+
+#footer{    
+    background:#D52B1E;
+    /*bottom: 0;*/
+    /*display: block;   */
+    /*margin-top: 100px;   
+    position:absolute;*/
+    text-align: center;
+    width: 100%;
+}
+
+#footer span{   
+
+    color: white; 
+    display:block;    
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0px;    
+    padding-top: 10px;
+}
+
+#header{
+    border-bottom: solid 5px #FF0000;
+    display: inline-block;
+    height:100px;
+    width: 100%;
+}
+
+#header img{
+    border:0;
+    padding: 5px 0 0 5px;
+}
+
+#head-right{
+    /*float:right;*/
+    display:block;
+    position: absolute;
+    right: 0;
+}
+
+
+#titulo{
+    display: inline-block;
+    font-size: 1.6em;    
+    line-height: 180%;
+    padding-top:20px;
+    position: absolute;
+    right: 0;
+    /*float:right;*/
+    vertical-align: top;
+    width:400px;    
+}
+
+#titulo span{
+    font-weight: 900;
+}
+
+
+
+.tableContent{
+    /*margin-top: 4em;*/
+    /*height: 430px;*/
+    /*border: 0px solid blue;*/
+    overflow: scroll;
+}
+
+.tableContent2{
+    height: 300px;
+    /*border: 0px solid blue;*/
+}
+
+.leftColumn{
+    display:inline-block;
+    vertical-align: top;
+    width: 39%;
+}
+
+.rightColumn{
+    display:inline-block;
+    vertical-align: top;
+    width:60%;
+}
+
+.buttonArea{
+    height: 50px;
+    border: 0px solid pink;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle; 
+    width:60%;
+}
+
+.constructGTable{
+
+    margin:0px;padding:0px;
+    width:100%;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 1px;
+    border-color: gray;
+    background-color: #CDCDCD;
+
+}
+
+.constructGTable2{
+
+    margin:0px;padding:0px;
+    width:100%;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 1px;
+    border-color: gray;
+    background-color: #CDCDCD;
+
+}
+
+.constructGTable3{
+
+    margin:0px;padding:0px;
+    width:25%;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 1px;
+    border-color: gray;
+    background-color: #CDCDCD;
+
+}
+
+.constructGTable4{
+
+    margin:0px;padding:0px;
+    width:150%;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 1px;
+    border-color: gray;
+    background-color: #CDCDCD;
+
+}
+.constructGTable5{
+
+    margin:0px;padding:0px;
+    width:200%;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 1px;
+    border-color: gray;
+    background-color: #CDCDCD;
+
+}.constructGTable6{
+
+    margin:0px;padding:0px;
+    width:250%;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 1px;
+    border-color: gray;
+    background-color: #CDCDCD;
+
+}
+
+
+
+.constructGTableHeader{
+
+    background-color:#D52B1E;
+    border:1px solid #999999;
+    text-align:left;
+    border-width:0px 0px 1px 1px;
+    font-size:8px;
+    font-family:Arial;
+    font-weight:bold;
+    color:#fff;
+}
+
+.constructGTable th, .constructGTable2 th, .constructGTable5 th, .constructGTable6 th{
+    background-color: #d52b1e;
+    color: #FFF;
+    border: 1px solid#FFF;
+    font-size: 8pt;
+    padding: 5px;
+}
+
+.constructGTableOddRow{
+    vertical-align:middle;
+    background-color:#fff;
+
+    border:1px solid #999999;
+    border-width:1px 1px 1px 1px;
+    text-align:left;
+    font-size:12px;
+    font-family:Arial;
+    font-weight:normal;
+    color:#000000;
+}
+
+.constructGTableOddRow td{
+    padding: 2px;
+}
+
+.constructGTableEvenRow td{
+    padding: 2px;
+}
+
+.constructGTableEvenRow{
+    vertical-align:middle;
+    background-color:#F0F0F6;
+    border:1px solid #999999;
+    border-width:1px 1px 1px 1px;
+    text-align:left;
+    font-size:12px;
+    font-family:Arial;
+    font-weight:normal;
+    color:#000000;
+}
+
+.btn {
+    background: #d52b1e !important;
+    background-image: -webkit-linear-gradient(top, #DF5E54, #d52b1e) !important;
+    background-image: -moz-linear-gradient(top, #DF5E54, #d52b1e) !important;
+    background-image: -ms-linear-gradient(top, #DF5E54, #d52b1e) !important;
+    background-image: -o-linear-gradient(top, #DF5E54, #d52b1e) !important;
+    background-image: linear-gradient(bottom, #DF5E54, #d52b1e) !important;
+
+    border: 1px solid #d52b1e !important;
+    /*background: #d52b1e url(../images/ui-bg_highlight-hard_40_d52b1e_1x100.png) 50% 50% repeat-x !important;*/
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    border-radius: 5px !important;
+    font-family: Arial !important;
+    color: #fff !important;
+    font-size: 12px !important;
+    padding: 5px 10px 5px 10px !important;
+    /*border: solid #b1b2b3 1px;*/
+    text-decoration: none !important;
+    margin:10px !important;
+}
+
+.btn2 {
+    background: #DDD !important; 
+    background-image: -webkit-linear-gradient(top, #DDD, #d52b1e) !important;
+    background-image: -moz-linear-gradient(top, #DDD, #d52b1e) !important;
+    background-image: -ms-linear-gradient(top, #DDD, #d52b1e) !important;
+    background-image: -o-linear-gradient(top, #DDD, #d52b1e) !important;
+    background-image: linear-gradient(bottom, #DDD, #d52b1e) !important;
+
+    border: 1px solid #d52b1e !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    border-radius: 5px !important;
+    font-family: Arial !important;
+    color: #000000 !important;
+    font-size: 12px !important;
+    padding: 2.5px 5px 2.5px 5px !important;
+
+    text-decoration: none !important;
+    margin:1px !important;
+}
+
+
+.btn:hover {
+    background: tomato !important;
+    background-image: -webkit-linear-gradient(top, #d52b1e, #DF5E54) !important;
+    background-image: -moz-linear-gradient(top, #d52b1e, #DF5E54) !important;
+    background-image: -ms-linear-gradient(top, #d52b1e, #DF5E54) !important;
+    background-image: -o-linear-gradient(top, #d52b1e, #DF5E54) !important;
+    background-image: linear-gradient(bottom, #d52b1e, #DF5E54) !important;
+
+    text-decoration: none;
+}
+
+.btn:disabled{
+    background: #a0afb8 !important;
+    background-image: -webkit-linear-gradient(top, #ddd, #999)  !important;
+    background-image: -moz-linear-gradient(top, #ddd, #999)  !important;
+    background-image: -ms-linear-gradient(top, #ddd, #999)  !important;
+    background-image: -o-linear-gradient(top, #ddd, #999)  !important;
+    background-image: linear-gradient(bottom, #ddd, #999)  !important;
+    border: 1px solid #ddd !important;
+}
+
+.formulario{
+    font-size:11px;
+    /*border: 1px solid red;*/
+    width: 100%;
+}
+
+.formulario2{
+    font-size: 11px;
+    width: 90%;
+}
+
+.formulario input, .formulario select, .formulario textArea{
+    /*height: 20px;*/
+    width: 100%;
+}
+
+.formulario2 input, .formulario2 select, .formulario2 textArea{
+    width: 100%;
+}
+
+.formulario tr, .formulario2 tr{
+
+    margin: 5px;
+    padding: 5px;
+}
+
+.formulario td{
+    /*border: 1px solid black;*/
+    padding: 2px 5px 2px 5px;
+    margin-right: 20px;
+    width: 25%; 
+
+}
+
+.formulario2 td{
+    padding: 2px 5px 2px 5px;
+    margin-right: 20px;
+    width: 10%; 
+}
+
+.formulario textArea, .formulario2 textArea{
+    height: 50px;
+}
+/*nombres de campos*/
+.formulario3{
+    font-size: 11px; 
+    padding: 5px;
+}
+/*distancia entre los nombres y celda de campos*/
+.formColumn1{
+    display: inline-block;
+    width: 95px;
+}
+
+.formColumn2{
+    display: inline-block; 
+    width: 60px;
+}
+
+.infoMessage{
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:3px 36px;
+    margin:2px;
+    list-style: none;
+    /*width: 700px;
+    /*border: 1px solid #D8D8D8;*/
+    /*text-transform: uppercase;
+    background-color: rgb(255, 249, 242);*/
+    background:#e3f7fc url('/resources/images/notice.png') no-repeat 10px 50%;
+    border:1px solid #8ed9f6;
+    /*color: red !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;*/
+
+}
+
+.errorMessage{
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:3px 36px;
+    margin:2px;
+    list-style: none;
+    /*width: 700px;
+    /*border: 1px solid #D8D8D8;*/
+    /*text-transform: uppercase;
+    background-color: rgb(255, 249, 242);*/
+    background:#ffecec url('../images/error.png') no-repeat 10px 50%;
+    border:1px solid #f5aca6;
+    /*color: red !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;*/
+}
+
+.warnMessage{
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:3px 36px;
+    margin:2px;
+    list-style: none;
+    background:#fff8c4 url('../images/warning.png') no-repeat 10px 50%;
+    border:1px solid #f2c779;
+}
+
+.successMessage{
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:3px 36px;
+    margin:2px;
+    list-style: none;
+    background:#e9ffd9 url('../images/success.png') no-repeat 10px 50%;
+    border:1px solid #a6ca8a;
+}
+
+
+
+.comboCenter{
+    /*margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle; */
+    margin-bottom: 2px;
+}
+
+.comboCenter select{
+    height: 20px;
+    font-size:11px;
+}
+
+/*HORARIO*/
+
+.horarioTable{
+    margin:0 0 30px 0;
+    padding:0px;
+    width:100%;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 1px;
+    border-color: gray;
+    background-color: #CDCDCD;
+}
+
+.horarioTableHeader{
+    background-color:#D52B1E;
+    border:1px solid #999999;
+    text-align:left;
+    border-width:0px 0px 1px 1px;
+    font-size:12px;
+    font-family:Arial;
+    font-weight:bold;
+    color:#fff;
+}
+
+.horarioTable th{
+    background-color: #d52b1e;
+    color: #FFF;
+    border: 1px solid#FFF;
+    font-size: 8pt;
+    padding: 5px;
+}
+
+.horarioTableOddRow{
+    vertical-align:middle;
+    background-color:#fff;
+    border:1px solid #999999;
+    border-width:1px 1px 1px 1px;
+    text-align:left;
+    font-size:12px;
+    font-family:Arial;
+    font-weight:normal;
+    color:#000000;
+}
+
+.horarioTableEvenRow{
+    vertical-align:middle;
+    background-color:#F0F0F6;
+    border:1px solid #999999;
+    border-width:1px 1px 1px 1px;
+    text-align:left;
+    font-size:12px;
+    font-family:Arial;
+    font-weight:normal;
+    color:#000000;
+}
+
+/*/HORARIO FIN*/
+
+td.auditoriaTableOddRow{
+    border-right: 1px solid black;
+}
+td.auditoriaTableEvenRow{
+    border-right: 1px solid black;
+}
+.auditoriaTableOddRow{
+    vertical-align:middle;
+    background-color:#fff;
+    border:1px solid #999999;
+    border-width:1px 1px 1px 1px;
+    text-align:left;
+    font-size:12px;
+    font-family:Arial;
+    font-weight:normal;
+    color:#000000;
+}
+
+.auditoriaTableEvenRow{
+    vertical-align:middle;
+    background-color:#F0F0F6;
+    border:1px solid #999999;
+    border-width:1px 1px 1px 1px;
+    text-align:left;
+    font-size:12px;
+    font-family:Arial;
+    font-weight:normal;
+    color:#000000;
+}
+
+
+
+/**inicio template cm**/
+#cuentaMatriz{
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    padding: 5px;
+    width:98%;
+    background: #F7F7F7 none repeat scroll 0% 0%;
+    background-color: #F7F7F7;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto auto;
+    border: dotted 1px gainsboro;
+    /*margin-bottom: -36px;*/
+}
+
+#log{
+    display:inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    /*margin-left: auto;*/
+    margin-right: auto;
+    min-height: 100%;
+    padding: 10px;
+    width:16%;
+    background-color: #F7F7F7;
+    border: dotted 1px gainsboro;
+}
+
+#subcontent{
+    display:inline-block;
+    vertical-align: top;
+    margin-top: 2px;
+    /*margin-left: 8px;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    min-height: 100%;
+    padding: 5px;
+    width:80%;
+    /*border: solid 1px gainsboro;*/
+}
+.constructGTableOddRowSelect{
+    border:1px solid #999999;
+    border-width:1px 1px 1px 1px;
+}
+
+.constructGTableOddRowSelect td{
+    padding: 0px;
+
+
+}
+
+
+.constructGTableEvenRowSelect td{
+    padding: 0px;
+}
+
+.constructGTableEvenRowSelect{
+    border:1px solid #999999;
+    border-width:1px 1px 1px 1px;
+}
+
+/**fin template cm**/
+
+/**tabs**/
+
+#tabs{
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#tabs li{
+    float: left;
+    margin: 0px 0.5em 0px 0px;
+    box-shadow: -1px 5px 0px rgb(0, 0, 0);
+}
+
+#tabs a {
+    position: relative;
+    background: #DDD linear-gradient(to bottom, #FFF, #DDD) repeat scroll 0% 0%;
+    float: left;
+    text-decoration: none;
+    color: #444;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+    padding: 4.5px 8px;
+    border-radius: 0px 12px 0px 0px;
+    margin-top: 5px;
+    box-shadow: -1px -1px 0px rgb(0, 0, 0);
+}
+
+.tabDefault {
+    position: relative;
+    background: #DDD linear-gradient(to bottom, #FFF, #DDD) repeat scroll 0% 0%;
+    float: left;
+    text-decoration: none;
+    color: #444;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+    padding: 4.5px 8px;
+    border-radius: 0px 12px 0px 0px;
+    margin-top: 5px;
+    box-shadow: -1px -1px 0px rgb(0, 0, 0);
+}
+span.tabDefault::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    background: #DDD linear-gradient(to bottom, #FFF, #DDD) repeat scroll 0% 0%;
+    border-radius: 0px 5px 0px 0px;
+    z-index: 2;
+    width: 13.2px;
+    right: -7.5px;
+    box-shadow: 1px -1px 0px rgba(0, 0, 0, 1);
+    transform: skew(23deg);
+}
+
+#tabs a::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    background: #DDD linear-gradient(to bottom, #FFF, #DDD) repeat scroll 0% 0%;
+    border-radius: 0px 5px 0px 0px;
+    z-index: 2;
+    width: 13.2px;
+    right: -7.5px;
+    box-shadow: 1px -1px 0px rgba(0, 0, 0, 1);
+    transform: skew(23deg);
+}
+#tabs a:hover,
+#tabs a:hover::after,
+#tabs a:focus,
+#tabs a:focus::after{
+    background: #fff;
+}
+
+#tabs a:focus{
+    outline: 0;
+}
+.current {
+    background: #fff !important;
+}
+#tabs .current::after{
+    background: #fff;
+    z-index: 2;
+}
+
+#contenido
+{
+    background: #fff;
+    background-color: #F7F7F7;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto auto;
+    background-image: -webkit-linear-gradient(top, #F7F7F7, #fff)  !important;    
+    padding: 2em;
+    /*height: 279px;*/ 
+    min-height: 100%;
+    width: 118%;
+    position: relative;
+    z-index: 2;
+    border-radius: 0 5px 5px 5px;
+    box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+    
+}
+/**fin tabs*/
+select {
+    width: 100%;
+}
+textarea[disabled], input[type="text"][disabled], input[type="password"][disabled], select[disabled] {
+    color: #777 !important;
+    cursor: default !important;
+    background:-o-linear-gradient(bottom, #e5e5e5 5%, #ffffff 100%) !important;	
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e5e5e5), color-stop(1, #ffffff) ) !important;
+    background:-moz-linear-gradient( center top, #e5e5e5 5%, #ffffff 100% ) !important;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#e5e5e5", endColorstr="#ffffff") !important;	
+    background: -o-linear-gradient(top,#e5e5e5,ffffff) !important;
+
+    background-color:#e5e5e5 !important;
+}
+
+.txtLabelsMgl{
+    font-weight: bold;  
+    font-size: smaller;
+}
+.txtCamposReqMgl{
+    font-weight: bold;  
+    color: red;
+    font-size: medium;
+    padding-left: 5px;
+}
+
+span.columnReadForm {
+    display: inline-block;
+    background-color: white;
+    width: 90%;
+    margin-right: 10px;
+    font-size: smaller;
+}
+span.columnReadFormNumero {
+    display: inline-block;
+    background-color: white;
+    width: 90%;
+    margin-right: 10px;
+    font-size: smaller;
+    text-align: right;
+}
+
+.botonTPagInicioCm {
+    background-image: url(../../img/botonInicio.png) !important;
+}
+
+.botonBaselista {
+    background-repeat: no-repeat !important;
+    height: 20px;
+    width: 32px;
+    background-color:transparent !important;
+    border:none !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: normal;
+    color: #FFF !important;
+    z-index: 10000;
+}
+
+.botonTPagAnteriorCm {
+    background-image: url(../../img/botonAnterior.png) !important;
+   
+}
+
+
+
+.botonTPagSiguienteCm {
+    background-image: url(../../img/botonSiguiente.png) !important;
+}
+.botonTPagFinCm {
+    background-image: url(../../img/botonFin.png) !important;
+}
+
+
+
+
+
+
