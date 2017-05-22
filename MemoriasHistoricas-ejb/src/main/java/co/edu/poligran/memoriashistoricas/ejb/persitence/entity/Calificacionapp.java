@@ -56,7 +56,7 @@ public class Calificacionapp implements Serializable {
     private Date fechaValoracion;
     @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
     @ManyToOne(fetch = FetchType.LAZY)
-    private Usuarios idUsuario;
+    private Usuario idUsuario;
 
     public Calificacionapp() {
     }
@@ -89,11 +89,11 @@ public class Calificacionapp implements Serializable {
         this.fechaValoracion = fechaValoracion;
     }
 
-    public Usuarios getIdUsuario() {
+    public Usuario getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuarios idUsuario) {
+    public void setIdUsuario(Usuario idUsuario) {
         this.idUsuario = idUsuario;
     }
 

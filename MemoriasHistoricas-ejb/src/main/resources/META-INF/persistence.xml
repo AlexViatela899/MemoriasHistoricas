@@ -4,18 +4,20 @@
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <jta-data-source>jdbc/MySql</jta-data-source>
         <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Calificacionapp</class>
-        <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Comentarios</class>
+        <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Comentario</class>
         <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Departamento</class>
         <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Evaluacion</class>
         <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Materialgrafico</class>
         <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Noticia</class>
-        <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Preguntas</class>
+        <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Pregunta</class>
         <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Puntoestudio</class>
-        <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Reportes</class>
+        <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Usuario</class>
         <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Rol</class>
         <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Tiporeporte</class>
-        <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Usuarios</class>
+        <class>co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Reporte</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <validation-mode>NONE</validation-mode>
         <properties>
             <property name="eclipselink.query-results-cache" value="false"/>
         </properties>

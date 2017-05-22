@@ -49,7 +49,7 @@ public class Evaluacion implements Serializable {
     private String resultado;
     @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
     @ManyToOne(fetch = FetchType.LAZY)
-    private Usuarios idUsuario;
+    private Usuario idUsuario;
     @JoinColumn(name = "id_departamento", referencedColumnName = "id_departamento")
     @ManyToOne(fetch = FetchType.LAZY)
     private Departamento idDepartamento;
@@ -77,11 +77,11 @@ public class Evaluacion implements Serializable {
         this.resultado = resultado;
     }
 
-    public Usuarios getIdUsuario() {
+    public Usuario getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuarios idUsuario) {
+    public void setIdUsuario(Usuario idUsuario) {
         this.idUsuario = idUsuario;
     }
 

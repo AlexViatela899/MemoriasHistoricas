@@ -5,6 +5,9 @@
  */
 package co.edu.poligran.memoriashistoricas.ejb.persitence.facade;
 
+import co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Usuario;
+import co.edu.poligran.memoriashistoricas.ejb.persitence.manager.MemoriasHistoricasManager;
+import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
@@ -20,6 +23,15 @@ public class MemoriasHistoricasFacade implements MemoriasHistoricasFacadeLocal {
 
     @PersistenceContext(unitName = "MemoriasHistoricasPU")
     private EntityManager em;
+    private MemoriasHistoricasManager memoriasHistoricasManager;
+
+    @PostConstruct
+    public void init() {
+        memoriasHistoricasManager = new MemoriasHistoricasManager(em);
+    }
     
-    
+    @Override
+    public Usuario autenticar(String usuarioCorreo, String clave) {
+        return memoriasHistoricasManager.autenticar(usuarioCorreo, clave);
+    }
 }

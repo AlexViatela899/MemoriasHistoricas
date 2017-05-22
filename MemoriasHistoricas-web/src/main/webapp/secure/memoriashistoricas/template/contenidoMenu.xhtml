@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <div class="general">
+        <div class="subgeneral">
+            <div class="encabezado">
+                <div class="imgIzq">
+                    <section>
+                        <div>
+
+                            <!--Sheet Slider-->
+                            <div class="sheet-slider">
+                                <input id="s1" class="sheet" type="radio" name="slide1" checked="true"/>
+                                <input id="s2" class="sheet" type="radio" name="slide1"/>
+                                <input id="s3" class="sheet" type="radio" name="slide1"/>
+                                <input id="s4" class="sheet" type="radio" name="slide1"/>
+                                <input id="s5" class="sheet" type="radio" name="slide1"/>
+                                <ul>
+                                    <!--imagenes-->
+                                    <li class="tab">
+                                        <img src="/MemoriasHistoricas-web/resources/images/slider1.png" />
+                                        <!--                                        <div>
+                                                                                    <h3>2 Weeks</h3>
+                                                                                    <span>Texto secundario con <a href="#urlPage">enlace</a></span>
+                                                                                </div>-->
+                                    </li>
+
+                                    <li class="tab">
+                                        <img src="/MemoriasHistoricas-web/resources/images/familia-3.jpg" />
+                                        <!--                                        <div>
+                                                                                    <h3>Artwork surreal</h3>
+                                                                                    <span>Texto secundario sin enlace</span>
+                                                                                </div>-->
+                                    </li>
+
+                                    <li class="tab">
+                                        <img src="/MemoriasHistoricas-web/resources/images/slider1.png" />
+                                        <!--                                        <div>
+                                                                                    <h3>Cat under a carpet</h3>
+                                                                                    <span>Texto secundario sin enlace</span>
+                                                                                </div>-->
+                                    </li>
+
+                                    <li class="tab">
+                                        <img src="/MemoriasHistoricas-web/resources/images/familia-3.jpg" />
+                                        <!--                                        <div>
+                                                                                    <h3>Watercolor landscape</h3>
+                                                                                    <span>Texto secundario con <a href="#urlPage">enlace</a></span>
+                                                                                </div>-->
+                                    </li>
+                                    <li class="tab">
+                                        <img src="/MemoriasHistoricas-web/resources/images/slider1.png" />
+                                        <!--                                        <div>
+                                                                                    <h3>Cute girl and cat</h3>
+                                                                                    <span>Texto secundario sin enlace</span>
+                                                                                </div>-->
+                                    </li> 
+                                </ul>
+
+
+
+                                <!--flechas-->
+                                <div class="sh-arrows">
+                                    <label for="s1"></label>
+                                    <label for="s2"></label>
+                                    <label for="s3"></label>
+                                    <label for="s4"></label>
+                                    <label for="s5"></label>
+                                </div>
+                            </div>
+                            <!--Fin de Sheet Slider-->
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <br/>
+            <br/>
+
+        </div>
+    </div>
+    <div style="background-color: #fff;height: 100%">
+        <br/>
+        <div style="margin-left: 35%; margin-right: 22%">
+            <div class="cajon ejemplo-1">
+                <img src="/MemoriasHistoricas-web/resources/images/visor-ventas-btn.jpg" />
+                <div class="mascara">
+                    <h2>Módulo Aprendizaje</h2>
+                    <p>Módulo de Ventas del aplicativo visor único de servicios integrados claro.</p>
+                    <h:commandLink class="link" rendered="#{inicioSesionBean.isUserInRole('MHUAPR')}" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Ventas Nuevas" action="#{menuVisorLoginBean.irMenu('VENTAS')}" immediate="true">Ir</h:commandLink >
+                </div>
+            </div>
+            <div class="cajon ejemplo-6">
+                <img src="/MemoriasHistoricas-web/resources/images/modulo-gestion.png"/>
+                <div class="mascara">
+                    <h2>Gestion</h2>
+                    <p>Gestion</p>
+                    <h:commandLink class="link" rendered="#{inicioSesionBean.isUserInRole('MHUADM')}" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Ventas Nuevas" action="#{menuVisorLoginBean.irMenu('VENTAS')}" immediate="true">Ir</h:commandLink >
+                </div>
+            </div>
+        </div>
+    </div>
+</html>

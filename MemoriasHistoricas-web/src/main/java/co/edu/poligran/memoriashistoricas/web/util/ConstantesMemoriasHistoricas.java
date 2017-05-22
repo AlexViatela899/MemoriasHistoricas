@@ -8,7 +8,7 @@ public final class ConstantesMemoriasHistoricas {
 
     public enum ITEM_MENU {
 
-        INICIO("Inicio");
+        INICIO("INICIO");
         String descripcion;
 
         private ITEM_MENU(String descripcion) {

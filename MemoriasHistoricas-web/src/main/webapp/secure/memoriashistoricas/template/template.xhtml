@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Memorias Históricas</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <h:outputStylesheet name="memoriasHistoricasStyle.css" library="css" />
+        <h:outputStylesheet name="menuMemoriasHistoricas.css" library="css" />
+        <h:outputStylesheet name="menuAdvance.css" library="css" />
+        <h:outputStylesheet name="estilos.min.css" library="css" />
+        <h:outputStylesheet name="sheet-slider.css" library="css" />
+        <h:outputStylesheet name="sheet-slider.min.css" library="css" />
+        <h:outputStylesheet name="footer.css" library="css" />
+        <h:outputScript name="moment.js" library="js" />
+        <h:outputScript name="main.js" library="js" />
+        <h:outputScript name="menu.js" library="js" />
+        <h:outputScript name="selectivizr-min.js" library="js" />
+        <h:outputScript name="respond.js" library="js" />
+        <h:outputScript name="html5shiv.min.js" library="js" />
+    </h:head>
+    <h:body>
+        <h:form id="loginVisor">
+            <header>
+                <ui:include src="principalName.xhtml">
+                </ui:include>
+            </header>
+            <div style="margin-bottom: 0; margin-top: 26px;">
+                <ui:insert name="content">
+                </ui:insert>
+            </div>
+        </h:form>
+    </h:body>
+</html>

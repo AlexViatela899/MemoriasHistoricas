@@ -53,7 +53,7 @@ public class Rol implements Serializable {
     @Column(name = "descripcion_rol")
     private String descripcionRol;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idRol", fetch = FetchType.LAZY)
-    private List<Usuarios> usuariosList;
+    private List<Usuario> usuariosList;
 
     public Rol() {
     }
@@ -87,11 +87,11 @@ public class Rol implements Serializable {
     }
 
     @XmlTransient
-    public List<Usuarios> getUsuariosList() {
+    public List<Usuario> getUsuariosList() {
         return usuariosList;
     }
 
-    public void setUsuariosList(List<Usuarios> usuariosList) {
+    public void setUsuariosList(List<Usuario> usuariosList) {
         this.usuariosList = usuariosList;
     }
 

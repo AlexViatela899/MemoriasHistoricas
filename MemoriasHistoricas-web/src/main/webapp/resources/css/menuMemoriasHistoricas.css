@@ -218,7 +218,7 @@ a, a:hover {
     font-weight: 400;
     position: absolute;
     background-color: #F9F8F6;
-    width: 100%;
+    width: 153%;
     height: 6em;
 }
 #nav > a {
@@ -232,14 +232,14 @@ a, a:hover {
     display: block;
 }
 #nav li a:active {
-    background-color: #c00 !important;
+    background-color: #003399 !important;
 }
 #nav span:after {
     width: 0;
     height: 0;
     border: 0.313em solid transparent; /* 5 */
     border-bottom: none;
-    border-top-color: #D02E10;
+    border-top-color: #003399;
     content: '';
     vertical-align: middle;
     display: inline-block;
@@ -267,15 +267,15 @@ a, a:hover {
     border-right: 1px solid #b7b7b7;
 }
 #nav > ul > li:hover > a, #nav > ul:not( :hover ) > li.active > a {
-    background-color: #b7b7b7;
+    background-color: #0F0254;
     color:white;
-    border-bottom: 3px solid #696969;
+    border-bottom: 3px solid #100163;
 }
 
 .clearfix li:hover > a {
-    background-color: #b7b7b7;
+    background-color: #0F0254;
     color:white;
-    border-bottom: 3px solid #696969;
+    border-bottom: 3px solid #100163;
 }
 /* second level */
 
@@ -304,12 +304,12 @@ a, a:hover {
     color:white;
 }
 #nav li ul li a:hover, #nav li ul:not( :hover ) li.active a {
-    background-color: #b7b7b7;
+    background-color: #0F0254;
     color:white;
 
 }
 .textMenu{
-    width:100%;
+    width: 66%;
     margin-top:50px;
     text-align: center;
     font-size:24px;
@@ -318,7 +318,7 @@ a, a:hover {
 }
 .guion{
     font-weight: bold;
-    color:#D02e10;
+    color: #100163;
 }
 @media only screen and ( max-width: 62.5em ) /* 1000 */ {
     #nav  {
