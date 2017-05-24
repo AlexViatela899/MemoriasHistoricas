@@ -7,18 +7,12 @@
                 xmlns:jsf="http://xmlns.jcp.org/jsf"
                 template="/login/template/homeTemplateLogin.xhtml" >
     <ui:define name="content">
-        <div jsf:rendered="#{inicioSesionBean.cambioClaveCorrecto}"
-             style="text-align:center;
-             width: 200px;
-             margin-left: 35px !important;">
-            #{inicioSesionBean.info}
-        </div>
         <br/>
         <fieldset class="clearfix">
             <p>
                 <span class="fontawesome-user">
                 </span>
-                <h:inputText value="#{inicioSesionBean.usuario}"
+                <h:inputText value="#{inicioSesionBean.usuarioCorreo}"
                              class="form-control"
                              pt:placeholder="Nombre de Usuario"/>
             </p>
@@ -31,10 +25,6 @@
                                pt:placeholder="Contraseña"/>
             </p>
             <br/>
-            <p style="text-align: center">
-                <h:commandLink type="submit" value="Cambiar contraseña"
-                               action="#{inicioSesionBean.irCambiarClave}"/>
-            </p>
             <br/>
             <p><h:commandButton value="Ingresar"
                                 action="#{inicioSesionBean.autenticar}"/></p>

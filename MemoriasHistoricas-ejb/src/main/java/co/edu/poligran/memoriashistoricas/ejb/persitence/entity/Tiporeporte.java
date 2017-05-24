@@ -53,7 +53,7 @@ public class Tiporeporte implements Serializable {
     @Column(name = "descripcion_tiporep")
     private String descripcionTiporep;
     @OneToMany(mappedBy = "idTiporep", fetch = FetchType.LAZY)
-    private List<Reportes> reportesList;
+    private List<Reporte> reportesList;
 
     public Tiporeporte() {
     }
@@ -87,11 +87,11 @@ public class Tiporeporte implements Serializable {
     }
 
     @XmlTransient
-    public List<Reportes> getReportesList() {
+    public List<Reporte> getReportesList() {
         return reportesList;
     }
 
-    public void setReportesList(List<Reportes> reportesList) {
+    public void setReportesList(List<Reporte> reportesList) {
         this.reportesList = reportesList;
     }
 

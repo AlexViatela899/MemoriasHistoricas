@@ -5,6 +5,7 @@
  */
 package co.edu.poligran.memoriashistoricas.ejb.persitence.facade;
 
+import co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Usuario;
 import javax.ejb.Local;
 
 /**
@@ -13,5 +14,7 @@ import javax.ejb.Local;
  */
 @Local
 public interface MemoriasHistoricasFacadeLocal {
+
+    public Usuario autenticar(String usuarioCorreo, String clave);
     
 }

@@ -29,13 +29,13 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @Versión: 1.0
  */
 @Entity
-@Table(name = "comentarios")
+@Table(name = "comentario")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Comentarios.findAll", query = "SELECT c FROM Comentarios c"),
-    @NamedQuery(name = "Comentarios.findByIdComentario", query = "SELECT c FROM Comentarios c WHERE c.idComentario = :idComentario"),
-    @NamedQuery(name = "Comentarios.findByComentario", query = "SELECT c FROM Comentarios c WHERE c.comentario = :comentario")})
-public class Comentarios implements Serializable {
+    @NamedQuery(name = "Comentario.findAll", query = "SELECT c FROM Comentario c"),
+    @NamedQuery(name = "Comentario.findByIdComentario", query = "SELECT c FROM Comentario c WHERE c.idComentario = :idComentario"),
+    @NamedQuery(name = "Comentario.findByComentario", query = "SELECT c FROM Comentario c WHERE c.comentario = :comentario")})
+public class Comentario implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -49,12 +49,12 @@ public class Comentarios implements Serializable {
     private String comentario;
     @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
     @ManyToOne(fetch = FetchType.LAZY)
-    private Usuarios idUsuario;
+    private Usuario idUsuario;
 
-    public Comentarios() {
+    public Comentario() {
     }
 
-    public Comentarios(String idComentario) {
+    public Comentario(String idComentario) {
         this.idComentario = idComentario;
     }
 
@@ -74,11 +74,11 @@ public class Comentarios implements Serializable {
         this.comentario = comentario;
     }
 
-    public Usuarios getIdUsuario() {
+    public Usuario getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuarios idUsuario) {
+    public void setIdUsuario(Usuario idUsuario) {
         this.idUsuario = idUsuario;
     }
 
@@ -92,10 +92,10 @@ public class Comentarios implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Comentarios)) {
+        if (!(object instanceof Comentario)) {
             return false;
         }
-        Comentarios other = (Comentarios) object;
+        Comentario other = (Comentario) object;
         if ((this.idComentario == null && other.idComentario != null) || (this.idComentario != null && !this.idComentario.equals(other.idComentario))) {
             return false;
         }

@@ -26,13 +26,13 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @Versión: 1.0
  */
 @Entity
-@Table(name = "preguntas")
+@Table(name = "pregunta")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Preguntas.findAll", query = "SELECT p FROM Preguntas p"),
-    @NamedQuery(name = "Preguntas.findByIdPregunta", query = "SELECT p FROM Preguntas p WHERE p.idPregunta = :idPregunta"),
-    @NamedQuery(name = "Preguntas.findByPregunta", query = "SELECT p FROM Preguntas p WHERE p.pregunta = :pregunta")})
-public class Preguntas implements Serializable {
+    @NamedQuery(name = "Pregunta.findAll", query = "SELECT p FROM Pregunta p"),
+    @NamedQuery(name = "Pregunta.findByIdPregunta", query = "SELECT p FROM Pregunta p WHERE p.idPregunta = :idPregunta"),
+    @NamedQuery(name = "Pregunta.findByPregunta", query = "SELECT p FROM Pregunta p WHERE p.pregunta = :pregunta")})
+public class Pregunta implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -45,10 +45,10 @@ public class Preguntas implements Serializable {
     @Column(name = "pregunta")
     private String pregunta;
 
-    public Preguntas() {
+    public Pregunta() {
     }
 
-    public Preguntas(String idPregunta) {
+    public Pregunta(String idPregunta) {
         this.idPregunta = idPregunta;
     }
 
@@ -78,10 +78,10 @@ public class Preguntas implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Preguntas)) {
+        if (!(object instanceof Pregunta)) {
             return false;
         }
-        Preguntas other = (Preguntas) object;
+        Pregunta other = (Pregunta) object;
         if ((this.idPregunta == null && other.idPregunta != null) || (this.idPregunta != null && !this.idPregunta.equals(other.idPregunta))) {
             return false;
         }

@@ -32,16 +32,18 @@ import javax.xml.bind.annotation.XmlTransient;
  * @Versión: 1.0
  */
 @Entity
-@Table(name = "usuarios")
+@Table(name = "usuario")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Usuarios.findAll", query = "SELECT u FROM Usuarios u"),
-    @NamedQuery(name = "Usuarios.findByIdUsuario", query = "SELECT u FROM Usuarios u WHERE u.idUsuario = :idUsuario"),
-    @NamedQuery(name = "Usuarios.findByNombres", query = "SELECT u FROM Usuarios u WHERE u.nombres = :nombres"),
-    @NamedQuery(name = "Usuarios.findByApellidos", query = "SELECT u FROM Usuarios u WHERE u.apellidos = :apellidos"),
-    @NamedQuery(name = "Usuarios.findByClave", query = "SELECT u FROM Usuarios u WHERE u.clave = :clave"),
-    @NamedQuery(name = "Usuarios.findByCorreoElectronico", query = "SELECT u FROM Usuarios u WHERE u.correoElectronico = :correoElectronico")})
-public class Usuarios implements Serializable {
+    @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u"),
+    @NamedQuery(name = "Usuario.findByIdUsuario", query = "SELECT u FROM Usuario u WHERE u.idUsuario = :idUsuario"),
+    @NamedQuery(name = "Usuario.findByNombres", query = "SELECT u FROM Usuario u WHERE u.nombres = :nombres"),
+    @NamedQuery(name = "Usuario.findByApellidos", query = "SELECT u FROM Usuario u WHERE u.apellidos = :apellidos"),
+    @NamedQuery(name = "Usuario.findByClave", query = "SELECT u FROM Usuario u WHERE u.clave = :clave"),
+    @NamedQuery(name = "Usuario.findByCorreoElectronico", query = "SELECT u FROM Usuario u WHERE u.correoElectronico = :correoElectronico"),
+    @NamedQuery(name = "Usuario.findByNombreUsuario", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario = :nombreUsuario"),
+    @NamedQuery(name = "Usuario.findByNombreUsuarioOrCorreoAndClave", query = "SELECT u FROM Usuario u WHERE (u.correoElectronico = :correoElectronico OR u.nombreUsuario = :nombreUsuario) AND u.clave = :clave")})
+public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -62,39 +64,43 @@ public class Usuarios implements Serializable {
     private String apellidos;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 50)
+    @Size(min = 1, max = 1000)
     @Column(name = "clave")
     private String clave;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 50)
+    @Size(min = 1, max = 150)
     @Column(name = "correo_electronico")
     private String correoElectronico;
+    @Size(min = 1, max = 50)
+    @Column(name = "nombre_usuario")
+    private String nombreUsuario;
     @OneToMany(mappedBy = "idUsuario", fetch = FetchType.LAZY)
     private List<Calificacionapp> calificacionappList;
     @OneToMany(mappedBy = "idUsuario", fetch = FetchType.LAZY)
-    private List<Reportes> reportesList;
+    private List<Reporte> reportesList;
     @OneToMany(mappedBy = "idUsuario", fetch = FetchType.LAZY)
-    private List<Comentarios> comentariosList;
+    private List<Comentario> comentariosList;
     @OneToMany(mappedBy = "idUsuario", fetch = FetchType.LAZY)
     private List<Evaluacion> evaluacionList;
     @JoinColumn(name = "id_rol", referencedColumnName = "id_rol")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Rol idRol;
 
-    public Usuarios() {
+    public Usuario() {
     }
 
-    public Usuarios(String idUsuario) {
+    public Usuario(String idUsuario) {
         this.idUsuario = idUsuario;
     }
 
-    public Usuarios(String idUsuario, String nombres, String apellidos, String clave, String correoElectronico) {
+    public Usuario(String idUsuario, String nombres, String apellidos, String clave, String correoElectronico, String nombreUsuario) {
         this.idUsuario = idUsuario;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.clave = clave;
         this.correoElectronico = correoElectronico;
+        this.nombreUsuario = nombreUsuario;
     }
 
     public String getIdUsuario() {
@@ -137,6 +143,14 @@ public class Usuarios implements Serializable {
         this.correoElectronico = correoElectronico;
     }
 
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
     @XmlTransient
     public List<Calificacionapp> getCalificacionappList() {
         return calificacionappList;
@@ -147,20 +161,20 @@ public class Usuarios implements Serializable {
     }
 
     @XmlTransient
-    public List<Reportes> getReportesList() {
+    public List<Reporte> getReportesList() {
         return reportesList;
     }
 
-    public void setReportesList(List<Reportes> reportesList) {
+    public void setReportesList(List<Reporte> reportesList) {
         this.reportesList = reportesList;
     }
 
     @XmlTransient
-    public List<Comentarios> getComentariosList() {
+    public List<Comentario> getComentariosList() {
         return comentariosList;
     }
 
-    public void setComentariosList(List<Comentarios> comentariosList) {
+    public void setComentariosList(List<Comentario> comentariosList) {
         this.comentariosList = comentariosList;
     }
 
@@ -191,10 +205,10 @@ public class Usuarios implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Usuarios)) {
+        if (!(object instanceof Usuario)) {
             return false;
         }
-        Usuarios other = (Usuarios) object;
+        Usuario other = (Usuario) object;
         if ((this.idUsuario == null && other.idUsuario != null) || (this.idUsuario != null && !this.idUsuario.equals(other.idUsuario))) {
             return false;
         }

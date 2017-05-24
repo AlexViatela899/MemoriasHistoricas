@@ -32,16 +32,16 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @Versión: 1.0
  */
 @Entity
-@Table(name = "reportes")
+@Table(name = "reporte")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Reportes.findAll", query = "SELECT r FROM Reportes r"),
-    @NamedQuery(name = "Reportes.findByIdReporte", query = "SELECT r FROM Reportes r WHERE r.idReporte = :idReporte"),
-    @NamedQuery(name = "Reportes.findByNombreReporte", query = "SELECT r FROM Reportes r WHERE r.nombreReporte = :nombreReporte"),
-    @NamedQuery(name = "Reportes.findByDescripcionReporte", query = "SELECT r FROM Reportes r WHERE r.descripcionReporte = :descripcionReporte"),
-    @NamedQuery(name = "Reportes.findByReporte", query = "SELECT r FROM Reportes r WHERE r.reporte = :reporte"),
-    @NamedQuery(name = "Reportes.findByFechaReporte", query = "SELECT r FROM Reportes r WHERE r.fechaReporte = :fechaReporte")})
-public class Reportes implements Serializable {
+    @NamedQuery(name = "Reporte.findAll", query = "SELECT r FROM Reporte r"),
+    @NamedQuery(name = "Reporte.findByIdReporte", query = "SELECT r FROM Reporte r WHERE r.idReporte = :idReporte"),
+    @NamedQuery(name = "Reporte.findByNombreReporte", query = "SELECT r FROM Reporte r WHERE r.nombreReporte = :nombreReporte"),
+    @NamedQuery(name = "Reporte.findByDescripcionReporte", query = "SELECT r FROM Reporte r WHERE r.descripcionReporte = :descripcionReporte"),
+    @NamedQuery(name = "Reporte.findByReporte", query = "SELECT r FROM Reporte r WHERE r.reporte = :reporte"),
+    @NamedQuery(name = "Reporte.findByFechaReporte", query = "SELECT r FROM Reporte r WHERE r.fechaReporte = :fechaReporte")})
+public class Reporte implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -64,15 +64,15 @@ public class Reportes implements Serializable {
     private Date fechaReporte;
     @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
     @ManyToOne(fetch = FetchType.LAZY)
-    private Usuarios idUsuario;
+    private Usuario idUsuario;
     @JoinColumn(name = "id_tiporep", referencedColumnName = "id_tiporep")
     @ManyToOne(fetch = FetchType.LAZY)
     private Tiporeporte idTiporep;
 
-    public Reportes() {
+    public Reporte() {
     }
 
-    public Reportes(String idReporte) {
+    public Reporte(String idReporte) {
         this.idReporte = idReporte;
     }
 
@@ -116,11 +116,11 @@ public class Reportes implements Serializable {
         this.fechaReporte = fechaReporte;
     }
 
-    public Usuarios getIdUsuario() {
+    public Usuario getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuarios idUsuario) {
+    public void setIdUsuario(Usuario idUsuario) {
         this.idUsuario = idUsuario;
     }
 
@@ -142,10 +142,10 @@ public class Reportes implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Reportes)) {
+        if (!(object instanceof Reporte)) {
             return false;
         }
-        Reportes other = (Reportes) object;
+        Reporte other = (Reporte) object;
         if ((this.idReporte == null && other.idReporte != null) || (this.idReporte != null && !this.idReporte.equals(other.idReporte))) {
             return false;
         }
