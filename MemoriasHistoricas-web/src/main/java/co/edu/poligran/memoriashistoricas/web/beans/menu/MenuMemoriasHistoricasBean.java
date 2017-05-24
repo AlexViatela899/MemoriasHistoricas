@@ -37,6 +37,11 @@ public class MenuMemoriasHistoricasBean implements Serializable {
                         ConstantesMemoriasHistoricas.ITEM_MENU.INICIO
                         .getDescription());
                 return "loginExito";
+            case RECORRIDO:
+                inicioSesionBean.setMenu(
+                        ConstantesMemoriasHistoricas.ITEM_MENU.RECORRIDO
+                        .getDescription());
+                return "mapa";
         }
         return url;
     }

@@ -6,13 +6,18 @@
       xmlns:jsf="http://xmlns.jcp.org/jsf">
     <h:head>
         <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"/>
-        <h:outputStylesheet name="style.css" library="css" />
+        <meta http-equiv="expires" content="0"/>
+        <meta http-equiv="Cache-Control" content="no-cache"/>
+        <meta http-equiv="Pragma" content="no-cache"/>
         <title>Memorias Históricas</title>
-        <h:outputStylesheet name="reset.css" library="css" />
+        <h:outputStylesheet name="style.css" library="css" />
+        <h:outputStylesheet name="memoriasHistoricasStyle.css" library="css" />
         <h:outputScript name="memoriasHistoricas.js" library="js" />
         <h:outputScript name="sha1.js" library="js" />
         <h:outputScript name="selectivizr-min.js" library="js" />
         <h:outputScript name="respond.js" library="js" />
+        <h:outputScript name="jquery.js" library="js" />
+        <h:outputScript name="script.js" library="js" />
         
     </h:head>
     <h:body class="body">
@@ -44,7 +49,7 @@
                 <h1><u><b class="titulo">Bienvenido</b></u></h1>
                 <br/>
                 <br/>
-                <h:form prependId="false">
+                <h:form id="formMemoriasHistoricas" prependId="false">
                     <ui:insert name="content">
                     </ui:insert>
                 </h:form>

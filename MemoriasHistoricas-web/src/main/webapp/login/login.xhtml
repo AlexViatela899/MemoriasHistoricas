@@ -5,7 +5,7 @@
                 xmlns:f="http://xmlns.jcp.org/jsf/core"
                 xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
                 xmlns:jsf="http://xmlns.jcp.org/jsf"
-                template="/login/template/homeTemplateLogin.xhtml" >
+                template="/login/template/homeTemplateLogin.xhtml">
     <ui:define name="content">
         <br/>
         <fieldset class="clearfix">
@@ -25,9 +25,15 @@
                                pt:placeholder="Contraseña"/>
             </p>
             <br/>
+            <p style="text-align: center">
+                <h:commandLink style="color: #FFFFFF" value="Cambiar contraseña"
+                               action="cambiarClave"/>
+            </p>
             <br/>
             <p><h:commandButton value="Ingresar"
                                 action="#{inicioSesionBean.autenticar}"/></p>
+            <p><h:commandButton value="Registrarse"
+                                action="registrarse"/></p>
         </fieldset>
     </ui:define>
 </ui:composition>

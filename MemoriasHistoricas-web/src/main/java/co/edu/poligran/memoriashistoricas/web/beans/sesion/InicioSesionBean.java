@@ -41,6 +41,8 @@ public class InicioSesionBean implements Serializable {
     private String clave;
     private String menu;
     private Usuario usuario;
+    private String nuevaClave;
+    private String confirmarClave;
     
     public static HttpServletRequest getRequest() {
         Object request = FacesContext.getCurrentInstance().getExternalContext()
@@ -73,11 +75,19 @@ public class InicioSesionBean implements Serializable {
                     if (usuario == null) {
                         resultado.setResultadoTransaccion(false);
                         resultado.setMensajeTransaccion(
-                                "Usuario o contraseña incorrectos.");
+                                "loginFalla");
+                        FacesContext.getCurrentInstance().addMessage(null,
+                                new FacesMessage(FacesMessage.SEVERITY_ERROR,
+                                        "Usuario o contraseña ".concat(
+                                                "incorrectos."), ""));
+                        return null;
                     } else if (usuario.getIdRol() == null) {
                         resultado.setResultadoTransaccion(false);
                         resultado.setMensajeTransaccion(
-                                "Usuario sin rol.");
+                                "loginFalla");
+                        FacesContext.getCurrentInstance().addMessage(null,
+                                new FacesMessage(FacesMessage.SEVERITY_ERROR,
+                                        "Usuario sin rol.", ""));
                     } else {
                         getRolesUsuario().add(
                                 usuario.getIdRol().getNombreRol());
@@ -109,7 +119,46 @@ public class InicioSesionBean implements Serializable {
                 .getExternalContext().invalidateSession();
         return "login";
     }
-
+    
+    public String cambiarClave() {
+        ResultadoOperacion resultado = new ResultadoOperacion();
+        if (!nuevaClave.equals(confirmarClave)) {
+            FacesContext.getCurrentInstance().addMessage(null,
+                    new FacesMessage(FacesMessage.SEVERITY_ERROR,
+                            "La contraseña nueva no coincide ".concat(
+                                    "con la confirmación."), ""));
+            return null;
+        } else {
+            resultado = actualizarUsuarioBd(
+                    usuarioCorreo, clave, nuevaClave);
+            if (resultado.isResultadoTransaccion()) {
+                FacesContext.getCurrentInstance().addMessage(null,
+                        new FacesMessage(FacesMessage.SEVERITY_INFO,
+                                resultado.getMensajeTransaccion(), ""));
+                return null;
+            } else {
+                FacesContext.getCurrentInstance().addMessage(null,
+                        new FacesMessage(FacesMessage.SEVERITY_ERROR,
+                                resultado.getMensajeTransaccion(), ""));
+                return null;
+            }
+        }
+    }
+    
+    public ResultadoOperacion actualizarUsuarioBd(String usuarioCorreo,
+            String clave, String nuevaClave) {
+        ResultadoOperacion resultadoOperacion = new ResultadoOperacion();
+        try {
+            return memoriasHistoricasFacadeLocal.cambiarClave(
+                    usuarioCorreo, clave, nuevaClave);
+        } catch (Throwable t) {
+            resultadoOperacion.setResultadoTransaccion(false);
+            resultadoOperacion.setMensajeTransaccion(
+                    "Error cambiando la contraseña. Intente nuevamente.");
+            return resultadoOperacion;
+        }
+    }
+    
     public boolean isUserInRole(String rol) {
         if (rolesUsuario == null || rolesUsuario.isEmpty()) {
             return false;
@@ -176,4 +225,21 @@ public class InicioSesionBean implements Serializable {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+    public String getNuevaClave() {
+        return nuevaClave;
+    }
+
+    public void setNuevaClave(String nuevaClave) {
+        this.nuevaClave = nuevaClave;
+    }
+
+    public String getConfirmarClave() {
+        return confirmarClave;
+    }
+
+    public void setConfirmarClave(String confirmarClave) {
+        this.confirmarClave = confirmarClave;
+    }
+    
 }

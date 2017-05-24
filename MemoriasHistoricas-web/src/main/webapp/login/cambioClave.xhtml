@@ -12,7 +12,7 @@
             <p>
                 <span class="fontawesome-user">
                 </span>
-                <h:inputText value="#{inicioSesionBean.usuarioCambioClave}"
+                <h:inputText value="#{inicioSesionBean.usuarioCorreo}"
                              class="form-control"
                              required="true"
                              requiredMessage="Campo nombre de usuario, obligatorio."
@@ -21,7 +21,7 @@
             <p>
                 <span class="fontawesome-lock">
                 </span>
-                <h:inputSecret value="#{inicioSesionBean.claveAntigua}" 
+                <h:inputSecret value="#{inicioSesionBean.clave}" 
                                class="form-control"
                                required="true"
                                requiredMessage="Campo contraseña anterior, obligatorio."
@@ -47,8 +47,8 @@
             </p>
             <br/>
             <p style="text-align: center">
-                <h:commandLink style="color: #000000" value="Volver"
-                               action="#{inicioSesionBean.volver}"
+                <h:commandLink style="color: #FFFFFF" value="Volver"
+                               action="login"
                                immediate="true"/>
             </p>
             <br/>

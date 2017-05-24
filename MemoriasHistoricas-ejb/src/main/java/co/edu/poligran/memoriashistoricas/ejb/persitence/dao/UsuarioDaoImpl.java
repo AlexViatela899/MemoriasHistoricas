@@ -24,12 +24,16 @@ public class UsuarioDaoImpl {
         this.em = em;
     }
     
-        public Usuario autenticar(String usuario, String clave) {
+    public Usuario autenticar(String usuario, String clave) {
         Query query = em.createNamedQuery(
                 "Usuario.findByNombreUsuarioOrCorreoAndClave");
         query.setParameter("nombreUsuario", usuario);
         query.setParameter("correoElectronico", usuario);
         query.setParameter("clave", clave);
         return (Usuario) query.getSingleResult();
+    }
+    
+    public Usuario merge(Usuario usuario) {
+        return em.merge(usuario);
     }
 }
