@@ -14,6 +14,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 
 /**
  * @Objetivo:
@@ -32,6 +33,27 @@ public class MemoriasHistoricasManager {
     
     public Usuario autenticar(String usuarioCorreo, String clave) {
         String claveEncriptada = null;
+        Usuario usuario = null;
+        try {
+            claveEncriptada = getHash512(clave);
+        } catch (NoSuchAlgorithmException ex) {
+            Logger.getLogger(MemoriasHistoricasManager.class.getName())
+                    .log(Level.SEVERE, ex.getMessage(), ex);
+        }
+        try {
+            usuario = usuarioDaoImpl.autenticar(
+                    usuarioCorreo, claveEncriptada);
+        } catch (NoResultException nre) {
+            Logger.getLogger(MemoriasHistoricasManager.class.getName())
+                    .log(Level.SEVERE, nre.getMessage(), nre);
+        }
+        return usuario;
+    }
+    
+    public ResultadoOperacion cambiarClave(String usuarioCorreo, String clave,
+            String nuevaClave) {
+        ResultadoOperacion resultadoOperacion = new ResultadoOperacion();
+        String claveEncriptada = null;
         try {
             claveEncriptada = getHash512(clave);
         } catch (NoSuchAlgorithmException ex) {
@@ -40,7 +62,42 @@ public class MemoriasHistoricasManager {
         }
         Usuario usuario = usuarioDaoImpl.autenticar(
                 usuarioCorreo, claveEncriptada);
-        return usuario;
+        if (usuario == null) {
+            resultadoOperacion.setResultadoTransaccion(false);
+            resultadoOperacion.setMensajeTransaccion(
+                    "Usuario o contraseña incorrectos.");
+            return resultadoOperacion;
+        }
+        claveEncriptada = null;
+        try {
+            claveEncriptada = getHash512(nuevaClave);
+        } catch (NoSuchAlgorithmException ex) {
+            Logger.getLogger(MemoriasHistoricasManager.class.getName())
+                    .log(Level.SEVERE, null, ex);
+        }
+        usuario.setClave(claveEncriptada);
+        Usuario cambioUsuario = usuarioDaoImpl.merge(usuario);
+        if (cambioUsuario != null) {
+            if (cambioUsuario.getClave() != null
+                    && !cambioUsuario.getClave().trim().isEmpty()) {
+                if (cambioUsuario.getClave().equals(claveEncriptada)) {
+                    resultadoOperacion.setResultadoTransaccion(true);
+                    resultadoOperacion.setMensajeTransaccion(
+                            "Se cambió correctamente la contraseña.");
+                }
+            } else {
+                resultadoOperacion.setResultadoTransaccion(false);
+                resultadoOperacion.setMensajeTransaccion(
+                        "Error cambiando la contraseña. Intente nuevamente");
+                return resultadoOperacion;
+            }
+        } else {
+            resultadoOperacion.setResultadoTransaccion(false);
+            resultadoOperacion.setMensajeTransaccion(
+                    "Error cambiando la contraseña. Intente nuevamente");
+            return resultadoOperacion;
+        }
+        return resultadoOperacion;
     }
 
     public String getHash512(String message) throws NoSuchAlgorithmException {

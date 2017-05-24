@@ -11,10 +11,18 @@
         <navigation-case>
             <from-outcome>loginExito</from-outcome>
             <to-view-id>/secure/index.xhtml</to-view-id>
-        </navigation-case>        
+        </navigation-case>
         <navigation-case>
-            <from-outcome>loginFalla</from-outcome>
-            <to-view-id>/login/errorLogin.xhtml</to-view-id>
+            <from-outcome>cambiarClave</from-outcome>
+            <to-view-id>/login/cambioClave.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registrarse</from-outcome>
+            <to-view-id>/registro/registroUsuario.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>mapa</from-outcome>
+            <to-view-id>/secure/memoriashistoricas/mapa.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 </faces-config>
