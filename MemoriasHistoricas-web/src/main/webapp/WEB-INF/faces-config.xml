@@ -20,6 +20,8 @@
             <from-outcome>registrarse</from-outcome>
             <to-view-id>/registro/registroUsuario.xhtml</to-view-id>
         </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
         <navigation-case>
             <from-outcome>mapa</from-outcome>
             <to-view-id>/secure/memoriashistoricas/mapa.xhtml</to-view-id>

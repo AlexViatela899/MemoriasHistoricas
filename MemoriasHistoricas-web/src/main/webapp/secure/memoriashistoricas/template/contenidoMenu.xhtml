@@ -4,211 +4,46 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:jsf="http://xmlns.jcp.org/jsf"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <style type="text/css">
-        .lightbox {
-            /** Default lightbox to hidden */
-            display: none;
-
-            /** Position and style */
-            position: fixed;
-            z-index: 999;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            top: 0;
-            left: 0;
-            background: rgba(0,0,0,0.9);
-        }
-        .lightbox img {
-            /** Pad the lightbox image */
-            max-width: 70%;
-            max-height: 60%;
-            margin-top: 10%;
-        }
-        .lightbox:target {
-            /** Remove default browser outline */
-            outline: none;
-
-            /** Unhide lightbox **/
-            display: block;
-        }
-    </style>
     <div class="general">
         <div class="subgeneral">
             <div class="encabezado">
                 <div class="imgIzq">
                     <section>
-                        <!--                        <div>
-                        
-                                                    Sheet Slider
-                                                    <div class="sheet-slider">
-                                                        <input id="s1" class="sheet" type="radio" name="slide1" checked="true"/>
-                                                        <input id="s2" class="sheet" type="radio" name="slide1"/>
-                                                        <input id="s3" class="sheet" type="radio" name="slide1"/>
-                                                        <input id="s4" class="sheet" type="radio" name="slide1"/>
-                                                        <input id="s5" class="sheet" type="radio" name="slide1"/>
-                                                        <ul>
-                                                            imagenes
-                                                            <li class="tab">
-                                                                <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
-                                                                                                        <div>
-                                                                                                            <h3>2 Weeks</h3>
-                                                                                                            <span>Texto secundario con <a href="#urlPage">enlace</a></span>
-                                                                                                        </div>
-                                                            </li>
-                        
-                                                            <li class="tab">
-                                                                <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
-                                                                                                        <div>
-                                                                                                            <h3>Artwork surreal</h3>
-                                                                                                            <span>Texto secundario sin enlace</span>
-                                                                                                        </div>
-                                                            </li>
-                        
-                                                            <li class="tab">
-                                                                <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
-                                                                                                        <div>
-                                                                                                            <h3>Cat under a carpet</h3>
-                                                                                                            <span>Texto secundario sin enlace</span>
-                                                                                                        </div>
-                                                            </li>
-                        
-                                                            <li class="tab">
-                                                                <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
-                                                                                                        <div>
-                                                                                                            <h3>Watercolor landscape</h3>
-                                                                                                            <span>Texto secundario con <a href="#urlPage">enlace</a></span>
-                                                                                                        </div>
-                                                            </li>
-                                                            <li class="tab">
-                                                                <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
-                                                                                                        <div>
-                                                                                                            <h3>Cute girl and cat</h3>
-                                                                                                            <span>Texto secundario sin enlace</span>
-                                                                                                        </div>
-                                                            </li> 
-                                                        </ul>
-                        
-                        
-                        
-                                                        flechas
-                                                        <div class="sh-arrows">
-                                                            <label for="s1"></label>
-                                                            <label for="s2"></label>
-                                                            <label for="s3"></label>
-                                                            <label for="s4"></label>
-                                                            <label for="s5"></label>
-                                                        </div>
-                                                    </div>
-                                                    Fin de Sheet Slider
-                                                </div>-->
                         <div>
-                            <h:form>
-                                <table width="600"> <tr><td style="font-family:'Martel',serif;" align="center"> 
-                                            <br/>
-                                            <br/>
-                                            <br/>
-                                            En el siguiente mapa seleccione un departamento para dar inicio al recorrido.
-                                            <img  width="600" border="0" height="848" useMap="#dwMap" src="/MemoriasHistoricas-web/resources/images/Mapa.png"/>
-                                            <map name="dwMap">
-                                                <area href="#img0" coords="298,117,10" shape="Circle" onMouseOver="call('298,117,10')" 
-                                                      title="GÜAJIRA" />
-                                                <a href="#_" class="lightbox" id="img0"><img src="/MemoriasHistoricas-web/resources/images/0.png" /></a>
-                                                <area href="#img1" coords="233,158,10" shape="Circle" onMouseOver="call('233,158,10')" 
-                                                      title="MAGDALENA" />
-                                                <a href="#_" class="lightbox" id="img1"><img src="/MemoriasHistoricas-web/resources/images/departamentos/1.png" /></a>
-                                                <area href="#img2" coords="204,139,10" shape="Circle" onMouseOver="call('204,139,10')" 
-                                                      title="ATLÁNTICO" />
-                                                <a href="#_" class="lightbox" id="img2"><img src="/MemoriasHistoricas-web/resources/images/departamentos/2.png" /></a>
-                                                <area href="#img3" coords="270,178,10" shape="Circle" onMouseOver="call('270,178,10')" 
-                                                      title="CESAR" />
-                                                <a href="#_" class="lightbox" id="img3"><img src="/MemoriasHistoricas-web/resources/images/departamentos/3.png" /></a>
-                                                <area href="#img4" coords="205,225,10" shape="Circle" onMouseOver="call('205,225,10')" 
-                                                      title="SUCRE" />
-                                                <a href="#_" class="lightbox" id="img4"><img src="/MemoriasHistoricas-web/resources/images/departamentos/4.png" /></a>
-                                                <area href="#img5" coords="238,237,10" shape="Circle" onMouseOver="call('238,237,10')" 
-                                                      title="BOLIVAR" />
-                                                <a href="#_" class="lightbox" id="img5"><img src="/MemoriasHistoricas-web/resources/images/departamentos/5.png" /></a>
-                                                <area href="#img6" coords="299,255,10" shape="Circle" onMouseOver="call('299,255,10')" 
-                                                      title="NORTE DE SANTANDER" />
-                                                <a href="#_" class="lightbox" id="img6"><img src="/MemoriasHistoricas-web/resources/images/departamentos/6.png" /></a>
-                                                <area href="#img7" coords="168,245,10" shape="Circle" onMouseOver="call('168,245,10')" 
-                                                      title="CÓRDOBA" />
-                                                <a href="#_" class="lightbox" id="img7"><img src="/MemoriasHistoricas-web/resources/images/departamentos/7.png" /></a>
-                                                <area href="#img8" coords="181,321,10" shape="Circle" onMouseOver="call('181,321,10')" 
-                                                      title="ANTIOQUIA" />
-                                                <a href="#_" class="lightbox" id="img8"><img src="/MemoriasHistoricas-web/resources/images/departamentos/8.png" /></a>
-                                                <area href="#img9" coords="275,315,10" shape="Circle" onMouseOver="call('275,315,10')" 
-                                                      title="SANTANDER" />
-                                                <a href="#_" class="lightbox" id="img9"><img src="/MemoriasHistoricas-web/resources/images/departamentos/9.png" /></a>
-                                                <area href="#img10" coords="394,324,10" shape="Circle" onMouseOver="call('394,324,10')" 
-                                                      title="ARAUCA" />
-                                                <a href="#_" class="lightbox" id="img10"><img src="/MemoriasHistoricas-web/resources/images/departamentos/10.png" /></a>
-                                                <area href="#img11" coords="119,368,10" shape="Circle" onMouseOver="call('119,368,10')" 
-                                                      title="CHOCÓ" />
-                                                <a href="#_" class="lightbox" id="img11"><img src="/MemoriasHistoricas-web/resources/images/departamentos/11.png" /></a>
-                                                <area href="#img12" coords="294,370,10" shape="Circle" onMouseOver="call('294,370,10')" 
-                                                      title="BOYACÁ" />
-                                                <a href="#_" class="lightbox" id="img12"><img src="/MemoriasHistoricas-web/resources/images/departamentos/12.png" /></a>
-                                                <area href="#img13" coords="363,379,10" shape="Circle" onMouseOver="call('363,379,10')" 
-                                                      title="CASANARE" />
-                                                <a href="#_" class="lightbox" id="img13"><img src="/MemoriasHistoricas-web/resources/images/departamentos/13.png" /></a>
-                                                <area href="#img14" coords="157,383,10" shape="Circle" onMouseOver="call('157,383,10')" 
-                                                      title="RISARALDA" />
-                                                <a href="#_" class="lightbox" id="img14"><img src="/MemoriasHistoricas-web/resources/images/departamentos/14.png" /></a>
-                                                <area href="#img15" coords="187,388,10" shape="Circle" onMouseOver="call('187,388,10')" 
-                                                      title="CALDAS" />
-                                                <a href="#_" class="lightbox" id="img15"><img src="/MemoriasHistoricas-web/resources/images/departamentos/15.png" /></a>
-                                                <area href="" coords="171,424,10" shape="Circle" onMouseOver="call('171,424,10')" 
-                                                      title="QUINDÍO" />
+                            <div class="sheet-slider">
+                                <input id="s1" class="sheet" type="radio" name="slide1" checked="true"/>
+                                <input id="s2" class="sheet" type="radio" name="slide1"/>
+                                <input id="s3" class="sheet" type="radio" name="slide1"/>
+                                <input id="s4" class="sheet" type="radio" name="slide1"/>
+                                <input id="s5" class="sheet" type="radio" name="slide1"/>
+                                <ul>
+                                    <li class="tab">
+                                        <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
+                                    </li>
 
-                                                <area href="#img17" coords="460,408,10" shape="Circle" onMouseOver="call('460,408,10')" 
-                                                      title="VICHADA" />
-                                                <a href="#_" class="lightbox" id="img17"><img src="/MemoriasHistoricas-web/resources/images/departamentos/17.png" /></a>
-                                                <area href="#img18" coords="246,411,10" shape="Circle" onMouseOver="call('246,411,10')" 
-                                                      title="CUNDINAMARCA" />
-                                                <a href="#_" class="lightbox" id="img18"><img src="/MemoriasHistoricas-web/resources/images/departamentos/18.png" /></a>
-                                                <area href="#img19" coords="296,474,10" shape="Circle" onMouseOver="call('296,474,10')" 
-                                                      title="META" />
-                                                <a href="#_" class="lightbox" id="img19"><img src="/MemoriasHistoricas-web/resources/images/departamentos/19.png" /></a>
-                                                <area href="#img20" coords="139,460,10" shape="Circle" onMouseOver="call('139,460,10')" 
-                                                      title="VALLE DEL CAUCA" />
-                                                <a href="#_" class="lightbox" id="img20"><img src="/MemoriasHistoricas-web/resources/images/departamentos/20.png" /></a>
-                                                <area href="#img21" coords="115,516,10" shape="Circle" onMouseOver="call('115,516,10')" 
-                                                      title="CAUCA" />
-                                                <a href="#_" class="lightbox" id="img21"><img src="/MemoriasHistoricas-web/resources/images/departamentos/21.png" /></a>
-                                                <area href="#img22" coords="193,451,10" shape="Circle" onMouseOver="call('193,451,10')" 
-                                                      title="TOLIMA" />
-                                                <a href="#_" class="lightbox" id="img22"><img src="/MemoriasHistoricas-web/resources/images/departamentos/22.png" /></a>
-                                                <area href="#img23" coords="188,499,10" shape="Circle" onMouseOver="call('188,499,10')" 
-                                                      title="HUILA" />
-                                                <a href="#_" class="lightbox" id="img23"><img src="/MemoriasHistoricas-web/resources/images/departamentos/23.png" /></a>
-                                                -<area href="#img24" coords="73,560,10" shape="Circle" onMouseOver="call('73,560,10')" 
-                                                       title="NARIÑO" />
-                                                <a href="#_" class="lightbox" id="img24"><img src="/MemoriasHistoricas-web/resources/images/departamentos/24.png" /></a>
-                                                <area href="#img25" coords="407,596,10" shape="Circle" onMouseOver="call('407,596,10')" 
-                                                      title="VAUPÉS" />
-                                                <a href="#_" class="lightbox" id="img25"><img src="/MemoriasHistoricas-web/resources/images/departamentos/25.png" /></a>
-                                                <area href="#img26" coords="178,611,10" shape="Circle" onMouseOver="call('178,611,10')" 
-                                                      title="PUTUMAYO" />
-                                                <a href="#_" class="lightbox" id="img26"><img src="/MemoriasHistoricas-web/resources/images/departamentos/26.png" /></a>
-                                                <area href="#img27" coords="248,597,10" shape="Circle" onMouseOver="call('248,597,10')" 
-                                                      title="CAQUETÁ" />
-                                                <a href="#_" class="lightbox" id="img27"><img src="/MemoriasHistoricas-web/resources/images/departamentos/27.png" /></a>
-                                                <area href="#img28" coords="339,540,10" shape="Circle" onMouseOver="call('330,540,10')" 
-                                                      title="GUAVIARE" />
-                                                <a href="#_" class="lightbox" id="img28"><img src="/MemoriasHistoricas-web/resources/images/departamentos/28.png" /></a>
-                                                <area href="#img29" coords="482,507,10" shape="Circle" onMouseOver="call('482,507,10')" 
-                                                      title="GUANÍA" />
-                                                <a href="#_" class="lightbox" id="img29"><img src="/MemoriasHistoricas-web/resources/images/departamentos/29.png" /></a>
-                                                <area href="#img30" coords="375,694,10" shape="Circle" onMouseOver="call('375,694,10')" 
-                                                      title="AMAZONAS" />
-                                                <a href="#_" class="lightbox" id="img30"><img src="/MemoriasHistoricas-web/resources/images/departamentos/30.png" /></a>
-                                            </map>
+                                    <li class="tab">
+                                        <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
+                                    </li>
 
-                                        </td></tr>
-                                </table>
-                            </h:form>
+                                    <li class="tab">
+                                        <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
+                                    </li>
+
+                                    <li class="tab">
+                                        <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
+                                    </li>
+                                    <li class="tab">
+                                        <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
+                                    </li> 
+                                </ul>
+                                <div class="sh-arrows">
+                                    <label for="s1"></label>
+                                    <label for="s2"></label>
+                                    <label for="s3"></label>
+                                    <label for="s4"></label>
+                                    <label for="s5"></label>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -218,25 +53,25 @@
 
         </div>
     </div>
-    <!--    <div style="background-color: #fff;height: 100%">
-            <br/>
-            <div style="margin-left: 35%; margin-right: 22%">
-                <div class="cajon ejemplo-1">
-                    <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
-                    <div class="mascara">
-                        <h2>Módulo Aprendizaje</h2>
-                        <p>Módulo de Aprendizaje en memorias históricas.</p>
-                        <h:commandLink class="link" rendered="" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Recorrido" action="mapa" immediate="true">Ir</h:commandLink>
-                    </div>
-                </div>
-                <div class="cajon ejemplo-6">
-                    <img src="/MemoriasHistoricas-web/resources/images/logo.png"/>
-                    <div class="mascara">
-                        <h2>Gestion</h2>
-                        <p>Gestion</p>
-                        <h:commandLink class="link" rendered="" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="GESTION" action="#{menuMemoriasHistoricasBean.irMenu('GESTION')}" immediate="true">Ir</h:commandLink>
-                    </div>
+    <div style="background-color: #fff;height: 100%">
+        <br/>
+        <div style="margin-left: 35%; margin-right: 22%">
+            <div class="cajon ejemplo-1">
+                <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
+                <div class="mascara">
+                    <h2>Módulo Aprendizaje</h2>
+                    <p>Módulo de Aprendizaje en memorias históricas.</p>
+                    <h:commandLink class="link" rendered="true" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Recorrido" action="mapa" immediate="true">Ir</h:commandLink>
                 </div>
             </div>
-        </div>-->
+            <div class="cajon ejemplo-6">
+                <img src="/MemoriasHistoricas-web/resources/images/logo.png"/>
+                <div class="mascara">
+                    <h2>Gestion</h2>
+                    <p>Gestion</p>
+                    <h:commandLink class="link" rendered="true" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="GESTION" action="#{menuMemoriasHistoricasBean.irMenu('GESTION')}" immediate="true">Ir</h:commandLink>
+                </div>
+            </div>
+        </div>
+    </div>
 </html>

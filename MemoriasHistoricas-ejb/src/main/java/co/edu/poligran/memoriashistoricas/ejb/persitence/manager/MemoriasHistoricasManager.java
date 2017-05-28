@@ -11,6 +11,8 @@ import co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Usuario;
 import co.edu.poligran.memoriashistoricas.ejb.vo.ResultadoOperacion;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.EntityManager;
@@ -98,6 +100,21 @@ public class MemoriasHistoricasManager {
             return resultadoOperacion;
         }
         return resultadoOperacion;
+    }
+    
+    public List<String> obtenerRolesUsuario(String usuarioCorreo) {
+        Usuario usuario = usuarioDaoImpl.findByNombreOCorreo(usuarioCorreo);
+        List<String> rolesUsuario = new LinkedList<>();
+        if (usuario != null) {
+            if (usuario.getIdRol() != null) {
+                rolesUsuario.add(usuario.getIdRol().getNombreRol());
+            } else {
+                    return null;
+            }
+        } else {
+            return null;
+        }
+        return rolesUsuario;
     }
 
     public String getHash512(String message) throws NoSuchAlgorithmException {

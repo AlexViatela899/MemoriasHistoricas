@@ -1,8 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:jsf="http://xmlns.jcp.org/jsf"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <a href="#nav" title=""/>
     <a href="#" title=""/>
     <ul class="clearfix">
@@ -14,7 +16,7 @@
             </a>
             <ul>
                 <li>
-                    <h:commandLink rendered="#{inicioSesionBean.isUserInRole('MHUAPR')}" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Recorrido" action="#{menuMemoriasHistoricasBean.irMenu('RECORRIDO')}" immediate="true">Iniciar Aprendizaje</h:commandLink>
+                    <h:commandLink rendered="true" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Recorrido" action="#{menuMemoriasHistoricasBean.irMenu('RECORRIDO')}" immediate="true">Iniciar Aprendizaje</h:commandLink>
                 </li>
             </ul>
         </li>
@@ -23,7 +25,7 @@
             </a>
             <ul>
                 <li>
-                    <h:commandLink rendered="#{inicioSesionBean.isUserInRole('MHUADM')}" class="nav-link" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Reporte" action="#{menuMemoriasHistoricasBean.irMenu('REPORTES')}" immediate="true">Reporte usuarios</h:commandLink >
+                    <h:commandLink rendered="true" class="nav-link" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Reporte" action="#{menuMemoriasHistoricasBean.irMenu('REPORTES')}" immediate="true">Reporte usuarios</h:commandLink >
                 </li>
             </ul>
         </li>

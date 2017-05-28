@@ -1,0 +1,30 @@
+<!DOCTYPE xhtml>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:jsf="http://xmlns.jcp.org/jsf"
+                template="/login/template/homeTemplateLogin.xhtml">
+    <ui:define name="content">
+        <div style="text-align:center;
+             width: 200px;
+             margin-left: 35px !important;
+             margin-top: 15%;"
+             id="irAlInicio">
+            <h3>
+                <b>Su sesión expiró. Haga clic en 
+                    <a style="" title="Ir al inicio" 
+                       href="/MemoriasHistoricas-web/">
+                        Ir al inicio
+                    </a>
+                    para empezar de nuevo.
+                </b>
+            </h3>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </ui:define>
+</ui:composition>
