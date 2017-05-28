@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package co.edu.poligran.memoriashistoricas.web.beans.sesion;
 
@@ -10,11 +5,9 @@ import co.edu.poligran.memoriashistoricas.ejb.exception.MemoriasHistoricasExcept
 import co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Usuario;
 import co.edu.poligran.memoriashistoricas.ejb.persitence.facade.MemoriasHistoricasFacadeLocal;
 import co.edu.poligran.memoriashistoricas.ejb.vo.ResultadoOperacion;
-import java.io.IOException;
 import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
-import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.enterprise.context.SessionScoped;
@@ -53,18 +46,18 @@ public class InicioSesionBean implements Serializable {
                 : null;
     }
     
-    public InicioSesionBean() {
-        
-    }
-
-    @PostConstruct
-    public void init() {
-        
-    }
-    
-    public String autenticar() throws IOException {
-        String login = "loginFalla";
+    public String autenticar() {
+        String login = null;
         if (!autenticado) {
+            if (usuarioCorreo == null || usuarioCorreo.isEmpty()
+                    || clave == null || clave.isEmpty()) {
+                FacesContext.getCurrentInstance().addMessage(null,
+                        new FacesMessage(
+                                FacesMessage.SEVERITY_ERROR,
+                                "Usuario y contraseña no pueden ir vacíos.",
+                                ""));
+                return null;
+            }
             ResultadoOperacion resultado = new ResultadoOperacion();
             usuario = new Usuario();
             if ((usuarioCorreo != null && !usuarioCorreo.isEmpty())
@@ -74,8 +67,7 @@ public class InicioSesionBean implements Serializable {
                             usuarioCorreo, clave);
                     if (usuario == null) {
                         resultado.setResultadoTransaccion(false);
-                        resultado.setMensajeTransaccion(
-                                "loginFalla");
+                        resultado.setMensajeTransaccion(null);
                         FacesContext.getCurrentInstance().addMessage(null,
                                 new FacesMessage(FacesMessage.SEVERITY_ERROR,
                                         "Usuario o contraseña ".concat(
@@ -84,21 +76,23 @@ public class InicioSesionBean implements Serializable {
                     } else if (usuario.getIdRol() == null) {
                         resultado.setResultadoTransaccion(false);
                         resultado.setMensajeTransaccion(
-                                "loginFalla");
+                                null);
                         FacesContext.getCurrentInstance().addMessage(null,
                                 new FacesMessage(FacesMessage.SEVERITY_ERROR,
                                         "Usuario sin rol.", ""));
                     } else {
-                        getRolesUsuario().add(
-                                usuario.getIdRol().getNombreRol());
+                        List<String> listaRoles = new LinkedList<>();
+                        listaRoles.add(usuario.getIdRol().getNombreRol());
+                        rolesUsuario = listaRoles;
                         menu = "INICIO";
+                        autenticado = true;
                         resultado.setResultadoTransaccion(true);
                         resultado.setMensajeTransaccion(
                                 "loginExito");
                     }
                     login = resultado.getMensajeTransaccion();
                 } catch (Exception ex) {
-                    login = "loginFalla";
+                    login = null;
                     FacesContext.getCurrentInstance().addMessage(null,
                             new FacesMessage(FacesMessage.SEVERITY_ERROR,
                                     ex.getMessage(), ""));
@@ -107,7 +101,7 @@ public class InicioSesionBean implements Serializable {
                 }
 
             } else {
-                login = "loginFalla";
+                login = null;
                 return login;
             }
         }
@@ -159,39 +153,12 @@ public class InicioSesionBean implements Serializable {
         }
     }
     
-    public boolean isUserInRole(String rol) {
-        if (rolesUsuario == null || rolesUsuario.isEmpty()) {
-            return false;
-        }
-        try {
-            List<String> grupos = rolesUsuario;
-            if (grupos.contains(rol)) {
-                return true;
-            }
-        } catch (Exception e) {
-
-            return false;
-        }
-        return false;
-    }
-    
     public boolean isAutenticado() {
         return autenticado;
     }
 
     public void setAutenticado(boolean autenticado) {
         this.autenticado = autenticado;
-    }
-
-    public List<String> getRolesUsuario() {
-        if (rolesUsuario == null) {
-            rolesUsuario = new LinkedList<>();
-        }
-        return rolesUsuario;
-    }
-
-    public void setRolesUsuario(List<String> rolesUsuario) {
-        this.rolesUsuario = rolesUsuario;
     }
 
     public String getUsuarioCorreo() {

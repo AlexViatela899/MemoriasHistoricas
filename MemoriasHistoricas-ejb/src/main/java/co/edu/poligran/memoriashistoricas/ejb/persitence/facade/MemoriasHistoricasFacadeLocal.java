@@ -7,6 +7,7 @@ package co.edu.poligran.memoriashistoricas.ejb.persitence.facade;
 
 import co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Usuario;
 import co.edu.poligran.memoriashistoricas.ejb.vo.ResultadoOperacion;
+import java.util.List;
 import javax.ejb.Local;
 
 /**
@@ -20,5 +21,7 @@ public interface MemoriasHistoricasFacadeLocal {
     
     public ResultadoOperacion cambiarClave(String usuario,
             String clave, String nuevaClave);
+    
+    public List<String> obtenerRolesUsuario(String usuarioCorreo);
 
 }

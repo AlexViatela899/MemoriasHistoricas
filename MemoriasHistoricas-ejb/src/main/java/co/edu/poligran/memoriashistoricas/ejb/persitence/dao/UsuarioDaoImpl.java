@@ -36,4 +36,12 @@ public class UsuarioDaoImpl {
     public Usuario merge(Usuario usuario) {
         return em.merge(usuario);
     }
+    
+    public Usuario findByNombreOCorreo(String usuarioCorreo) {
+        Query query = em.createNamedQuery(
+                "Usuario.findByNombreUsuarioOrCorreo");
+        query.setParameter("nombreUsuario", usuarioCorreo);
+        query.setParameter("correoElectronico", usuarioCorreo);
+        return (Usuario) query.getSingleResult();
+    }
 }
