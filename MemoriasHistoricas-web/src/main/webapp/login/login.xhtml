@@ -12,7 +12,7 @@
             <p>
                 <span class="fontawesome-user">
                 </span>
-                <h:inputText value="#{inicioSesionBean.usuarioCorreo}"
+                <h:inputText value="#{loginBean.usuarioCorreo}"
                              class="form-control"
                              pt:placeholder="Nombre de Usuario"/>
             </p>
@@ -20,7 +20,7 @@
                 <span class="fontawesome-lock">
                 </span>
                 <h:inputSecret id="clave"
-                               value="#{inicioSesionBean.clave}" 
+                               value="#{loginBean.clave}" 
                                class="form-control"
                                pt:placeholder="Contraseña"/>
             </p>
@@ -31,7 +31,7 @@
             </p>
             <br/>
             <p><h:commandButton value="Ingresar"
-                                action="#{inicioSesionBean.autenticar}"/></p>
+                                action="#{loginBean.autenticar}"/></p>
             <p><h:commandButton value="Registrarse"
                                 action="registrarse"/></p>
         </fieldset>

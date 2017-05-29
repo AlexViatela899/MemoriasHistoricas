@@ -1,6 +1,6 @@
 package co.edu.poligran.memoriashistoricas.web.beans.filtrocompatible;
 
-import co.edu.poligran.memoriashistoricas.web.beans.sesion.InicioSesionBean;
+import co.edu.poligran.memoriashistoricas.web.beans.sesion.LoginBean;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
@@ -52,13 +52,13 @@ public class FiltroCompatible implements Filter, Serializable {
 
         String url = req.getServletPath();
 
-        InicioSesionBean inicioSesionBean
-                = (InicioSesionBean) req.getSession()
-                .getAttribute("inicioSesionBean");
-        if (inicioSesionBean != null) {
-            if (inicioSesionBean.isAutenticado()) {
+        LoginBean loginBean
+                = (LoginBean) req.getSession()
+                .getAttribute("loginBean");
+        if (loginBean != null) {
+            if (loginBean.isAutenticado()) {
                 try {
-                    inicioSesionBean.autenticar();
+                    loginBean.autenticar();
                 } catch (Exception ex) {
                     Logger.getLogger(FiltroCompatible.class.getName())
                             .log(Level.SEVERE, null, ex);
