@@ -16,7 +16,7 @@
             </a>
             <ul>
                 <li>
-                    <h:commandLink rendered="true" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Recorrido" action="#{menuMemoriasHistoricasBean.irMenu('RECORRIDO')}" immediate="true">Iniciar Aprendizaje</h:commandLink>
+                    <h:commandLink rendered="#{menuMemoriasHistoricasBean.isUserInRole('MHUAPR')}" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Recorrido" action="#{menuMemoriasHistoricasBean.irMenu('RECORRIDO')}" immediate="true">Iniciar Aprendizaje</h:commandLink>
                 </li>
             </ul>
         </li>
@@ -25,14 +25,14 @@
             </a>
             <ul>
                 <li>
-                    <h:commandLink rendered="true" class="nav-link" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Reporte" action="#{menuMemoriasHistoricasBean.irMenu('REPORTES')}" immediate="true">Reporte usuarios</h:commandLink >
+                    <h:commandLink rendered="#{menuMemoriasHistoricasBean.isUserInRole('MHUADM')}" class="nav-link" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Reporte" action="#{menuMemoriasHistoricasBean.irMenu('REPORTES')}" immediate="true">Reporte usuarios</h:commandLink >
                 </li>
             </ul>
         </li>
         <li>
             <a title="Cerrar sesión" 
-               jsf:action="#{inicioSesionBean.cerrarSesion}">Cerrar Sesión</a>
+               jsf:action="#{loginBean.cerrarSesion}">Cerrar Sesión</a>
         </li>
     </ul>
-    <div class="textMenu"><label class="guion">—</label> #{inicioSesionBean.menu} <label class="guion">—</label></div>
+    <div class="textMenu"><label class="guion">—</label> #{loginBean.menu} <label class="guion">—</label></div>
 </html>
