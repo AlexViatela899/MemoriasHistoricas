@@ -9,13 +9,18 @@
         <title>Memorias Históricas</title>
         <h:outputStylesheet name="style.css" library="css" />
         <h:outputStylesheet name="memoriasHistoricasStyle.css" library="css" />
+        <h:outputStylesheet name="jquery-ui.css" library="css" />
+        <h:outputStylesheet name="registro.css" library="css" />
         <h:outputScript name="memoriasHistoricas.js" library="js" />
         <h:outputScript name="sha1.js" library="js" />
         <h:outputScript name="selectivizr-min.js" library="js" />
         <h:outputScript name="respond.js" library="js" />
         <h:outputScript name="jquery.js" library="js" />
         <h:outputScript name="script.js" library="js" />
-        
+        <h:outputScript name="jquery.min.js" library="js"/>
+        <h:outputScript name="jquery-ui.min.js" library="js"/>
+        <h:outputScript name="script.js" library="js"/>
+
     </h:head>
     <h:body class="body">
         <h:panelGroup id="pMessages" rendered="#{not empty facesContext.messageList}">
@@ -33,13 +38,12 @@
             </div>
             <div id="fade" class="black_overlayError" style="display : block;"></div>
         </h:panelGroup>  
-                <div> <img src="/MemoriasHistoricas-web/resources/images/logo.png"
+        <div> <img src="/MemoriasHistoricas-web/resources/images/logo.png"
                    style="width: 60%;position: relative;margin-top: 12%"/>
         </div>
         <div class="container">
             <div id="login">
                 <h1><u><b class="titulo">Bienvenido</b></u></h1>
-                <br/>
                 <br/>
                 <h:form id="formMemoriasHistoricas" prependId="false">
                     <ui:insert name="content">
@@ -47,11 +51,5 @@
                 </h:form>
             </div>
         </div>
-        <script>
-                function cifrar(idCifrar){
-                    var input_pass = document.getElementById(idCifrar);
-                    input_pass.value = sha1(input_pass.value);
-                }
-        </script>
     </h:body>
 </html>

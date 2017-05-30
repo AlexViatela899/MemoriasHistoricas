@@ -7,6 +7,7 @@
 package co.edu.poligran.memoriashistoricas.ejb.persitence.manager;
 
 import co.edu.poligran.memoriashistoricas.ejb.persitence.dao.UsuarioDaoImpl;
+import co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Rol;
 import co.edu.poligran.memoriashistoricas.ejb.persitence.entity.Usuario;
 import co.edu.poligran.memoriashistoricas.ejb.vo.ResultadoOperacion;
 import java.security.MessageDigest;
@@ -98,6 +99,33 @@ public class MemoriasHistoricasManager {
             resultadoOperacion.setMensajeTransaccion(
                     "Error cambiando la contraseña. Intente nuevamente");
             return resultadoOperacion;
+        }
+        return resultadoOperacion;
+    }
+    
+    public ResultadoOperacion registrarUsuario(Usuario usuario) {
+        Rol rol = new Rol();
+        rol.setIdRol(1);
+        usuario.setIdRol(rol);
+        ResultadoOperacion resultadoOperacion = new ResultadoOperacion();
+        String claveEncriptada = null;
+        try {
+            claveEncriptada = getHash512(usuario.getClave());
+        } catch (NoSuchAlgorithmException ex) {
+            Logger.getLogger(MemoriasHistoricasManager.class.getName())
+                    .log(Level.SEVERE, null, ex);
+        }
+        usuario.setClave(claveEncriptada);
+        Usuario usuarioFinal = usuarioDaoImpl.registrarUsuario(usuario);
+        if (usuarioFinal != null) {
+            resultadoOperacion.setResultadoTransaccion(true);
+            resultadoOperacion.setMensajeTransaccion(
+                    "Se registró correctamente el usuario.");
+        } else {
+            resultadoOperacion.setResultadoTransaccion(false);
+            resultadoOperacion.setMensajeTransaccion(
+                    "No se registró el usuario.");
+            
         }
         return resultadoOperacion;
     }
