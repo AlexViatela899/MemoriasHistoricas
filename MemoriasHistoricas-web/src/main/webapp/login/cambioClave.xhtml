@@ -12,7 +12,7 @@
             <p>
                 <span class="fontawesome-user">
                 </span>
-                <h:inputText value="#{inicioSesionBean.usuarioCorreo}"
+                <h:inputText value="#{loginBean.usuarioCorreo}"
                              class="form-control"
                              required="true"
                              requiredMessage="Campo nombre de usuario, obligatorio."
@@ -21,7 +21,7 @@
             <p>
                 <span class="fontawesome-lock">
                 </span>
-                <h:inputSecret value="#{inicioSesionBean.clave}" 
+                <h:inputSecret value="#{loginBean.clave}" 
                                class="form-control"
                                required="true"
                                requiredMessage="Campo contraseña anterior, obligatorio."
@@ -30,7 +30,7 @@
             <p>
                 <span class="fontawesome-lock">
                 </span>
-                <h:inputSecret value="#{inicioSesionBean.nuevaClave}" 
+                <h:inputSecret value="#{loginBean.nuevaClave}" 
                                class="form-control"
                                required="true"
                                requiredMessage="Campo nueva contraseña, obligatorio."
@@ -39,7 +39,7 @@
             <p>
                 <span class="fontawesome-lock">
                 </span>
-                <h:inputSecret value="#{inicioSesionBean.confirmarClave}" 
+                <h:inputSecret value="#{loginBean.confirmarClave}" 
                                class="form-control"
                                required="true"
                                requiredMessage="Campo confirmar contraseña, obligatorio."
@@ -53,7 +53,7 @@
             </p>
             <br/>
             <p>
-                <h:commandButton value="Aceptar" action="#{inicioSesionBean.cambiarClave}"/>
+                <h:commandButton value="Aceptar" action="#{loginBean.cambiarClave}"/>
             </p>
         </fieldset>
     </ui:define>

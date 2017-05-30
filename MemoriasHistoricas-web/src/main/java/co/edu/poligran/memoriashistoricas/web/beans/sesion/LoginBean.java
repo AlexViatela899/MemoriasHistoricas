@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 package co.edu.poligran.memoriashistoricas.web.beans.sesion;
 
@@ -22,9 +27,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author Cristian Peralta
  * @Versión: 1.0
  */
-@ManagedBean(name = "inicioSesionBean")
-@SessionScoped
-public class InicioSesionBean implements Serializable {
+public class LoginBean implements Serializable {
 
     @EJB
     private MemoriasHistoricasFacadeLocal memoriasHistoricasFacadeLocal;
@@ -47,17 +50,8 @@ public class InicioSesionBean implements Serializable {
     }
     
     public String autenticar() {
-        String login = null;
+        String login = "loginFalla";
         if (!autenticado) {
-            if (usuarioCorreo == null || usuarioCorreo.isEmpty()
-                    || clave == null || clave.isEmpty()) {
-                FacesContext.getCurrentInstance().addMessage(null,
-                        new FacesMessage(
-                                FacesMessage.SEVERITY_ERROR,
-                                "Usuario y contraseña no pueden ir vacíos.",
-                                ""));
-                return null;
-            }
             ResultadoOperacion resultado = new ResultadoOperacion();
             usuario = new Usuario();
             if ((usuarioCorreo != null && !usuarioCorreo.isEmpty())
@@ -67,7 +61,8 @@ public class InicioSesionBean implements Serializable {
                             usuarioCorreo, clave);
                     if (usuario == null) {
                         resultado.setResultadoTransaccion(false);
-                        resultado.setMensajeTransaccion(null);
+                        resultado.setMensajeTransaccion(
+                                "loginFalla");
                         FacesContext.getCurrentInstance().addMessage(null,
                                 new FacesMessage(FacesMessage.SEVERITY_ERROR,
                                         "Usuario o contraseña ".concat(
@@ -76,7 +71,7 @@ public class InicioSesionBean implements Serializable {
                     } else if (usuario.getIdRol() == null) {
                         resultado.setResultadoTransaccion(false);
                         resultado.setMensajeTransaccion(
-                                null);
+                                "loginFalla");
                         FacesContext.getCurrentInstance().addMessage(null,
                                 new FacesMessage(FacesMessage.SEVERITY_ERROR,
                                         "Usuario sin rol.", ""));
@@ -85,14 +80,13 @@ public class InicioSesionBean implements Serializable {
                         listaRoles.add(usuario.getIdRol().getNombreRol());
                         rolesUsuario = listaRoles;
                         menu = "INICIO";
-                        autenticado = true;
                         resultado.setResultadoTransaccion(true);
                         resultado.setMensajeTransaccion(
                                 "loginExito");
                     }
                     login = resultado.getMensajeTransaccion();
                 } catch (Exception ex) {
-                    login = null;
+                    login = "loginFalla";
                     FacesContext.getCurrentInstance().addMessage(null,
                             new FacesMessage(FacesMessage.SEVERITY_ERROR,
                                     ex.getMessage(), ""));
@@ -101,7 +95,7 @@ public class InicioSesionBean implements Serializable {
                 }
 
             } else {
-                login = null;
+                login = "loginFalla";
                 return login;
             }
         }

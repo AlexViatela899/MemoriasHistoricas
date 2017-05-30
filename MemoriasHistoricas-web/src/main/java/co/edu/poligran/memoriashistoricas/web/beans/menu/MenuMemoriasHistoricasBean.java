@@ -1,7 +1,7 @@
 package co.edu.poligran.memoriashistoricas.web.beans.menu;
 
 import co.edu.poligran.memoriashistoricas.ejb.persitence.facade.MemoriasHistoricasFacadeLocal;
-import co.edu.poligran.memoriashistoricas.web.beans.sesion.InicioSesionBean;
+import co.edu.poligran.memoriashistoricas.web.beans.sesion.LoginBean;
 import co.edu.poligran.memoriashistoricas.web.util.ConstantesMemoriasHistoricas;
 import co.edu.poligran.memoriashistoricas.web.util.JSFUtil;
 import java.io.Serializable;
@@ -19,8 +19,6 @@ import javax.servlet.http.HttpSession;
  * @author Cristian Peralta
  * @Versión: 1.0
  */
-@ManagedBean(name = "menuMemoriasHistoricasBean")
-@SessionScoped
 public class MenuMemoriasHistoricasBean implements Serializable {
 
     @EJB
@@ -31,6 +29,9 @@ public class MenuMemoriasHistoricasBean implements Serializable {
     private FacesContext contex;
     private String url;
 
+    public MenuMemoriasHistoricasBean() {
+    }
+
     public String irMenu(String caseMenu) {
         url = "loginExito";
         contex = FacesContext.getCurrentInstance();
@@ -38,20 +39,20 @@ public class MenuMemoriasHistoricasBean implements Serializable {
                 = ConstantesMemoriasHistoricas.ITEM_MENU.valueOf(caseMenu);
         HttpSession httpSession
                 = (HttpSession) contex.getExternalContext().getSession(false);
-        InicioSesionBean inicioSesionBean
-                = JSFUtil.getSessionBean(InicioSesionBean.class);
-        usuarioCorreo = inicioSesionBean.getUsuarioCorreo();
+        LoginBean loginBean
+                = (LoginBean) JSFUtil.getBean("loginBean");
+        usuarioCorreo = loginBean.getUsuarioCorreo();
 
         switch (seleccionado) {
             case INICIO:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.INICIO
-                        .getDescription());
+                                .getDescription());
                 return "loginExito";
             case RECORRIDO:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.RECORRIDO
-                        .getDescription());
+                                .getDescription());
                 return "mapa";
             case FARC:
                 inicioSesionBean.setMenu(
@@ -105,15 +106,18 @@ public class MenuMemoriasHistoricasBean implements Serializable {
                         .getDescription());
                 return "grupos"; 
             case GESTION:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.GESTION
-                        .getDescription());
+                                .getDescription());
                 return "gestion";
         }
         return url;
     }
 
     public boolean isUserInRole(String rol) {
+        LoginBean loginBean
+                = (LoginBean) JSFUtil.getBean("loginBean");
+        usuarioCorreo = loginBean.getUsuarioCorreo();
         if (rolesUsuario == null || rolesUsuario.isEmpty()) {
             rolesUsuario = memoriasHistoricasFacadeLocal.obtenerRolesUsuario(
                     usuarioCorreo);

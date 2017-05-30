@@ -26,8 +26,7 @@
             <from-outcome>mapa</from-outcome>
             <to-view-id>/secure/memoriashistoricas/mapa.xhtml</to-view-id>
         </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
+   
         <navigation-case>
             <from-outcome>grupos</from-outcome>
             <to-view-id>/secure/memoriashistoricas/grupos.xhtml</to-view-id>
@@ -69,4 +68,20 @@
             <to-view-id>/secure/memoriashistoricas/gruposarm/urabenos.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+    <managed-bean>
+        <managed-bean-name>menuMemoriasHistoricasBean</managed-bean-name>
+        <managed-bean-class>co.edu.poligran.memoriashistoricas.web.beans.menu.MenuMemoriasHistoricasBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>menuMemoriasHistoricasBean</managed-bean-name>
+        <managed-bean-class>co.edu.poligran.memoriashistoricas.web.beans.menu.MenuMemoriasHistoricasBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>loginBean</managed-bean-name>
+        <managed-bean-class>co.edu.poligran.memoriashistoricas.web.beans.sesion.LoginBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
 </faces-config>

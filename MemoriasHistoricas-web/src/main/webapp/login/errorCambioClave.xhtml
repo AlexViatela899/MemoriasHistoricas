@@ -7,18 +7,18 @@
                 xmlns:jsf="http://xmlns.jcp.org/jsf"
                 template="/login/template/templateCambioClave.xhtml">
     <ui:define name="content" >
-        <div jsf:rendered="#{!inicioSesionBean.cambioClaveCorrecto}" 
+        <div jsf:rendered="#{!loginBean.cambioClaveCorrecto}" 
              style="text-align:center;
              width: 200px;
              margin-left: 35px !important;">
-            #{inicioSesionBean.info}
+            #{loginBean.info}
         </div>
         <br/>
         <fieldset class="clearfix">
             <p>
                 <span class="fontawesome-user">
                 </span>
-                <h:inputText value="#{inicioSesionBean.usuarioCambioClave}"
+                <h:inputText value="#{loginBean.usuarioCambioClave}"
                              class="form-control"
                              required="true"
                              requiredMessage="Campo nombre de usuario, obligatorio."
@@ -27,7 +27,7 @@
             <p>
                 <span class="fontawesome-lock">
                 </span>
-                <h:inputSecret value="#{inicioSesionBean.claveAntigua}" 
+                <h:inputSecret value="#{loginBean.claveAntigua}" 
                                class="form-control"
                                required="true"
                                requiredMessage="Campo contraseña anterior, obligatorio."
@@ -36,7 +36,7 @@
             <p>
                 <span class="fontawesome-lock">
                 </span>
-                <h:inputSecret value="#{inicioSesionBean.nuevaClave}" 
+                <h:inputSecret value="#{loginBean.nuevaClave}" 
                                class="form-control"
                                required="true"
                                requiredMessage="Campo nueva contraseña, obligatorio."
@@ -45,7 +45,7 @@
             <p>
                 <span class="fontawesome-lock">
                 </span>
-                <h:inputSecret value="#{inicioSesionBean.confirmarClave}" 
+                <h:inputSecret value="#{loginBean.confirmarClave}" 
                                class="form-control"
                                required="true"
                                requiredMessage="Campo confirmar contraseña, obligatorio."
@@ -54,12 +54,12 @@
             <br/>
             <p style="text-align: center">
                 <h:commandLink style="color: #000000" value="Volver"
-                               action="#{inicioSesionBean.volver}"
+                               action="#{loginBean.volver}"
                                immediate="true"/>
             </p>
             <br/>
             <p>
-                <h:commandButton value="Aceptar" action="#{inicioSesionBean.cambiarClave}"/>
+                <h:commandButton value="Aceptar" action="#{loginBean.cambiarClave}"/>
             </p>
         </fieldset>
     </ui:define>
