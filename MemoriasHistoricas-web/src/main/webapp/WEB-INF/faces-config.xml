@@ -67,6 +67,30 @@
             <from-outcome>grupo9</from-outcome>
             <to-view-id>/secure/memoriashistoricas/gruposarm/urabenos.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>dep1</from-outcome>
+            <to-view-id>/secure/memoriashistoricas/departamentos/guajira.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>dep1_1</from-outcome>
+            <to-view-id>/secure/memoriashistoricas/departamentos/guajira_1.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>dep1_2</from-outcome>
+            <to-view-id>/secure/memoriashistoricas/departamentos/guajira_2.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>dep2</from-outcome>
+            <to-view-id>/secure/memoriashistoricas/departamentos/magdalena.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>dep2_1</from-outcome>
+            <to-view-id>/secure/memoriashistoricas/departamentos/magdalena_1.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>dep2_2</from-outcome>
+            <to-view-id>/secure/memoriashistoricas/departamentos/magdalena_2.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
 
     <managed-bean>
