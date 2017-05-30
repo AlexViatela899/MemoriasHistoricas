@@ -10,6 +10,16 @@ public final class ConstantesMemoriasHistoricas {
 
         INICIO("INICIO"),
         RECORRIDO("RECORRIDO"),
+        FARC("FARC"),
+        AUC("AUC"),
+        CCALI("CCALI"),
+        CMEDELLIN("CMEDELLIN"),
+        ELN("ELN"),
+        ERPAC("ERPAC"),
+        M19("M19"),
+        RASTROJOS("RASTROJOS"),
+        URABENOS("URABENOS"),
+        GPARM("GPARM"),
         GESTION("GESTION");
         String descripcion;
 

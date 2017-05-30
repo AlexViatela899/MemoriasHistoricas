@@ -1,0 +1,67 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="/secure/memoriashistoricas/template/template.xhtml">
+    <ui:define name="content">
+        <style type="text/css">
+            .slider {
+	width: 50%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+	width: 100%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+        </style>
+        
+    <div style="background-color:transparent;height: 100%; width: 800px; margin-left: 22%;">
+            <br/>
+            <div style="color: #000;">
+                <br/>
+                <center><h1 style="color: #000;">ERPAC</h1></center>
+                <div class="slider">
+                    <ul>
+                            <li><img src="/MemoriasHistoricas-web/resources/images/grupos/slider/ERPAC1.png" alt=""/></li>
+                            <li><img src="/MemoriasHistoricas-web/resources/images/grupos/slider/ERPAC2.png" alt=""/></li>
+                            <li><img src="/MemoriasHistoricas-web/resources/images/grupos/slider/ERPAC1.png" alt=""/></li>
+                            <li><img src="/MemoriasHistoricas-web/resources/images/grupos/slider/ERPAC2.png" alt=""/></li>
+		    </ul>
+                </div>
+                <p>
+                    </p>
+                
+<!--                <img src="/MemoriasHistoricas-web/resources/images/grupos/FARC.png" />-->
+            </div>
+            
+        </div>
+    </ui:define>
+</ui:composition>
