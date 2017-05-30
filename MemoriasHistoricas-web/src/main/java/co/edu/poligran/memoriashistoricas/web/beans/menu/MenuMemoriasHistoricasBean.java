@@ -105,6 +105,36 @@ public class MenuMemoriasHistoricasBean implements Serializable {
                         ConstantesMemoriasHistoricas.ITEM_MENU.GPARM
                         .getDescription());
                 return "grupos"; 
+            case GUAJIRA:
+                loginBean.setMenu(
+                        ConstantesMemoriasHistoricas.ITEM_MENU.GUAJIRA
+                        .getDescription());
+                return "dep1";
+            case GUAJIRA_1:
+                loginBean.setMenu(
+                        ConstantesMemoriasHistoricas.ITEM_MENU.GUAJIRA_1
+                        .getDescription());
+                return "dep1_1";
+            case GUAJIRA_2:
+                loginBean.setMenu(
+                        ConstantesMemoriasHistoricas.ITEM_MENU.GUAJIRA_2
+                        .getDescription());
+                return "dep1_2";
+            case MAGDALENA:
+                loginBean.setMenu(
+                        ConstantesMemoriasHistoricas.ITEM_MENU.MAGDALENA
+                        .getDescription());
+                return "dep2";
+            case MAGDALENA_1:
+                loginBean.setMenu(
+                        ConstantesMemoriasHistoricas.ITEM_MENU.MAGDALENA_1
+                        .getDescription());
+                return "dep2_1";
+            case MAGDALENA_2:
+                loginBean.setMenu(
+                        ConstantesMemoriasHistoricas.ITEM_MENU.MAGDALENA_2
+                        .getDescription());
+                return "dep2_2";    
             case GESTION:
                 loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.GESTION

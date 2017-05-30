@@ -1,0 +1,47 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="/secure/memoriashistoricas/template/template.xhtml"
+                xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <ui:define name="content">
+    <div style="background-color:transparent;height: 100%; width: 900px; margin-left: 18%;">
+            <br/>
+            
+                <div class="cajon ejemplo-1" style="border-bottom:#006 solid 4px">
+                    <img src="/MemoriasHistoricas-web/resources/images/aprendizaje/nn.png" />
+                    <div class="mascara">
+                        <br/>
+                        <h2>Eliseo Beltrán Cadena alias "el Gordo"</h2>
+                        <a title="Masacres" href="#img1"><p style="cursor: pointer;">Ver Más</p></a>
+                        <a href="#_" class="lightbox2" id="img1"><img src="/MemoriasHistoricas-web/resources/images/aprendizaje/magdalena/magdalena5.png" /></a>
+                    </div>
+                </div>
+              <!--               <div class="cajon ejemplo-1" style="border-bottom:#006 solid 4px">
+                    <h3 style="margin-top: 28%;">Personaje 3</h3>
+                    <div class="mascara">
+                        <br/>
+                        <h2>Masacre de Bahía Portete</h2>
+                        <a title="Masacres" href="#img3"><p style="cursor: pointer;">Ver Más</p></a>
+                        <a href="#_" class="lightbox2" id="img3"><img src="/MemoriasHistoricas-web/resources/images/aprendizaje/guajira/guajira3.png" /></a>
+                    </div>
+                </div>
+                <div class="cajon ejemplo-1" style="border-bottom:#006 solid 4px">
+                    <h3 style="margin-top: 28%;">Personaje 4</h3>
+                    <div class="mascara">
+                        <br/>
+                        <h2>Masacre de Villa del Río</h2>
+                        <a title="Masacres" href="#img4"><p style="cursor: pointer;">Ver Más</p></a>
+                        <a href="#_" class="lightbox2" id="img4"><img src="/MemoriasHistoricas-web/resources/images/aprendizaje/guajira/guajira4.png" /></a>
+                    </div>
+                </div>-->
+                <div class="cajon ejemplo-1" style="border-bottom:#006 solid 4px">
+                    <h3 style="margin-top: 28%;">Regresar</h3>
+                    <div class="mascara">
+                        <br/>
+                        <h2>Volver</h2>
+                        <a title="Masacres" jsf:action="#{menuMemoriasHistoricasBean.irMenu('MAGDALENA')}"><p style="cursor: pointer;">Regresar</p></a>
+                    </div>
+                </div>
+            </div>
+        </ui:define>
+</ui:composition>			
