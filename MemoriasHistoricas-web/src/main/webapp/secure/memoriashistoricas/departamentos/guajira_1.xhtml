@@ -1,0 +1,56 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="/secure/memoriashistoricas/template/template.xhtml"
+                xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <ui:define name="content">
+    <div style="background-color:transparent;height: 100%; width: 900px; margin-left: 18%;">
+            <br/>
+            
+                <div class="cajon ejemplo-1" style="border-bottom:#006 solid 4px">
+                    <h1 style="margin-top: 25%;">1997</h1>
+                    <div class="mascara">
+                        <br/>
+                        <h2>Masacre de Rio Ancho</h2>
+                        <a title="Masacres" href="#img1"><p style="cursor: pointer;">Iniciar</p></a>
+                        <a href="#_" class="lightbox2" id="img1"><img src="/MemoriasHistoricas-web/resources/images/aprendizaje/guajira/guajira1.png" /></a>
+                    </div>
+                </div>
+                <div class="cajon ejemplo-1" style="border-bottom:#006 solid 4px">
+                    <h1 style="margin-top: 25%;">2003</h1>
+                    <div class="mascara">
+                        <br/>
+                        <h2>Masacre de Maicao 2003</h2>
+                        <a title="Masacres" href="#img2"><p style="cursor: pointer;">Iniciar</p></a>
+                        <a href="#_" class="lightbox2" id="img2"><img src="/MemoriasHistoricas-web/resources/images/aprendizaje/guajira/guajira2.png" /></a>
+                    </div>
+                </div>
+                <div class="cajon ejemplo-1" style="border-bottom:#006 solid 4px">
+                    <h1 style="margin-top: 25%;">2004</h1>
+                    <div class="mascara">
+                        <br/>
+                        <h2>Masacre de Bahía Portete</h2>
+                        <a title="Masacres" href="#img3"><p style="cursor: pointer;">Iniciar</p></a>
+                        <a href="#_" class="lightbox2" id="img3"><img src="/MemoriasHistoricas-web/resources/images/aprendizaje/guajira/guajira3.png" /></a>
+                    </div>
+                </div>
+                <div class="cajon ejemplo-1" style="border-bottom:#006 solid 4px">
+                    <h1 style="margin-top: 25%;">2004</h1>
+                    <div class="mascara">
+                        <br/>
+                        <h2>Masacre de Villa del Río</h2>
+                        <a title="Masacres" href="#img4"><p style="cursor: pointer;">Iniciar</p></a>
+                        <a href="#_" class="lightbox2" id="img4"><img src="/MemoriasHistoricas-web/resources/images/aprendizaje/guajira/guajira4.png" /></a>
+                    </div>
+                </div>
+                <div class="cajon ejemplo-1" style="border-bottom:#006 solid 4px">
+                    <h1 style="margin-top: 25%;">Regresar</h1>
+                    <div class="mascara">
+                        <br/>
+                        <h2>Volver</h2>
+                        <a title="Masacres" jsf:action="#{menuMemoriasHistoricasBean.irMenu('GUAJIRA')}"><p style="cursor: pointer;">Regresar</p></a>
+                    </div>
+                </div>
+            </div>
+        </ui:define>
+</ui:composition>			

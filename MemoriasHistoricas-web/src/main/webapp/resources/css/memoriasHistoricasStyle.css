@@ -601,3 +601,32 @@ footer span{
     /** Unhide lightbox **/
     display: block;
 }
+
+.lightbox2 {
+    /** Default lightbox to hidden */
+    display: none;
+
+    /** Position and style */
+    position: fixed;
+    z-index: 990;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.9);
+}
+.lightbox2 img {
+    /** Pad the lightbox image */
+    max-width: 50%;
+    max-height: 50%;
+    margin-top: 10%;
+    margin-left: 25%;
+}
+.lightbox2:target {
+    /** Remove default browser outline */
+    outline: none;
+
+    /** Unhide lightbox **/
+    display: block;
+}

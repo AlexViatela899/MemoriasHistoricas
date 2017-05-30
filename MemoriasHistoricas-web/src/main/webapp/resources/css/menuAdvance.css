@@ -19,6 +19,7 @@ body{font-family: Arial,serif;}
     text-align: center;
     cursor: default;
     background: #fff;
+    border: #FFF solid 2px;
 }
 .mascara{
     width: 222px;

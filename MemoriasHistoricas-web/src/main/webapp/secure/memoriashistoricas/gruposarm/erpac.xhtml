@@ -1,0 +1,68 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="/secure/memoriashistoricas/template/template.xhtml">
+    <ui:define name="content">
+        <style type="text/css">
+            .slider {
+	width: 50%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+	width: 100%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+        </style>
+        
+    <div style="background-color:transparent;height: 100%; width: 800px; margin-left: 22%;">
+            <br/>
+            <div style="color: #000;">
+                <br/>
+                <center><h1 style="color: #000;">ERPAC</h1></center>
+                <p style="text-align: justify">El Ejército Revolucionario Antisubversivo de Colombia, mejor conocido como el Erpac, fue uno de los grupos neo-paramilitares más fuertes del país desde el año 2006 hasta la muerte de su líder Pedro Olivero Guerrero, alias ‘Cuchillo’ a finales de 2010. La organización en ese momento había logrado un control casi hegemónico – aunque a veces compartido con las Farc – en numerosas zonas de los llanos orientales. </p>
+                <div class="slider">
+                    <ul>
+                            <li><img src="/MemoriasHistoricas-web/resources/images/grupos/slider/ERPAC1.png" alt=""/></li>
+                            <li><img src="/MemoriasHistoricas-web/resources/images/grupos/slider/ERPAC2.png" alt=""/></li>
+                            <li><img src="/MemoriasHistoricas-web/resources/images/grupos/slider/ERPAC1.png" alt=""/></li>
+                            <li><img src="/MemoriasHistoricas-web/resources/images/grupos/slider/ERPAC2.png" alt=""/></li>
+		    </ul>
+                </div>
+                <p style="text-align: justify">La base del Erpac era un grupo de alrededor de 200 combatientes escondidos en una finca en la vereda La Cooperativa, del municipio de Mapiripán, todos con armas no entregadas y compradas por ‘Cuchillo’. El hecho de que el grupo fue organizado y escondido en La Cooperativa es diciente pues esa vereda se había convertido en de base paramilitar del Bloque Centauros durante el reinado de las AUC en el lugar. Mapiripán, después de sufrir dos masacres – la del casco urbano en 1997, y otra en el corregimiento de Caño Jabón en 1998 – terminó siendo un lugar de fuerte control, presencia e incluso cierto apoyo para los paramilitares. Rápidamente pudieron modificar parte del orden social y lograr el control en ciertos sectores del municipio.<br/>
+                El grupo armado se pudo organizar fácilmente también porque esta población sentía que dependía de ellos para protegerlos de la guerrilla, algo que el Erpac, especialmente ‘Cuchillo’ por haber convertido esa zona en su base, aprovechó. </p>
+                
+<!--                <img src="/MemoriasHistoricas-web/resources/images/grupos/FARC.png" />-->
+            </div>
+            
+        </div>
+    </ui:define>
+</ui:composition>

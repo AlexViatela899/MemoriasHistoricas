@@ -1,0 +1,38 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="/secure/memoriashistoricas/template/template.xhtml"
+                xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <ui:define name="content">
+    <div style="background-color:transparent;height: 100%; width: 800px; margin-left: 25%;">
+            <br/>
+            <div style="margin-left: 0%; margin-right: 0%;">
+                <div class="cajon ejemplo-1">
+                    <img src="/MemoriasHistoricas-web/resources/images/departamentos/modulo1.png" />
+                    <div class="mascara">
+                        <br/>
+                        <h2>MÓDULO 1</h2>
+                        <a title="Masacres" jsf:action="#{menuMemoriasHistoricasBean.irMenu('GUAJIRA_1')}"><p style="cursor: pointer;">Iniciar</p></a>
+                    </div>
+                </div>
+                <div class="cajon ejemplo-1">
+                    <img src="/MemoriasHistoricas-web/resources/images/departamentos/modulo2.png" />
+                    <div class="mascara">
+                        <br/>
+                        <h2>MÓDULO 2</h2>
+                        <a title="Masacres" jsf:action="#{menuMemoriasHistoricasBean.irMenu('GUAJIRA_2')}"><p style="cursor: pointer;">Iniciar</p></a>
+                    </div>
+                </div>
+                <div class="cajon ejemplo-1">
+                    <img src="/MemoriasHistoricas-web/resources/images/aprendizaje/interes.png" />
+                    <div class="mascara">
+                        <br/>
+                        <h2>INFORME - Fundación de Paz y Reconciliación</h2>
+                        <a title="Masacres" href="http://www.pares.com.co/wp-content/uploads/2014/03/INFORME-LA-GUAJIRA-REDPRODEPAZ-Y-PAZ-Y-RECONCILIACI%C3%93N.pdf" target="_blank"><p style="cursor: pointer;">Abrir</p></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>			

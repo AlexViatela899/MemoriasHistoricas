@@ -1,0 +1,67 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="/secure/memoriashistoricas/template/template.xhtml">
+    <ui:define name="content">
+        <style type="text/css">
+            .slider {
+	width: 50%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 300%;
+	
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+	width: 100%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+        </style>
+        
+    <div style="background-color:transparent;height: 100%; width: 800px; margin-left: 22%;">
+            <br/>
+            <div style="color: #000;">
+                <br/>
+                <center><h1 style="color: #000;">CARTEL DE CALI</h1></center>
+                <p style="text-align: justify;">El Cártel de Cali fue el nombre dado por la Administración para el Control de Drogas (DEA) a la organización criminal dedicada al tráfico de cocaína, encabezada por los hermanos Gilberto, Miguel Rodríguez Orejuela, Jose Santacruz Londoño y Hélmer Herrera Buitrago.
+                   Recibe el nombre de la ciudad de Cali, en la cual tuvieron su principal base de operaciones.No se ha logrado calcular el total del dinero que movieron en la década de 1980 y 1990, se especula que fueron miles de millones de dólares, los cuales siguen en paradero desconocido, siendo uno de los contables menos conocidos por las autoridades, y con aseveramiento por parte de la justicia norteamericana de que existe la probabilidad de que la mayor parte del dinero este ubicada en la banca suiza.</p>
+                <div class="slider">
+                    <ul>
+                            <li><img src="/MemoriasHistoricas-web/resources/images/grupos/slider/CCALI1.png" alt=""/></li>
+                            <li><img src="/MemoriasHistoricas-web/resources/images/grupos/slider/CCALI2.png" alt=""/></li>
+                            <li><img src="/MemoriasHistoricas-web/resources/images/grupos/slider/CCALI3.png" alt=""/></li>
+		    </ul>
+                </div>
+                <p style="text-align: justify;">Con el triunfo en las elecciones presidenciales de 1994 en Colombia de Ernesto Samper Pizano y el posterior escándalo desatado por los narco-casettes, en los que se indicaba que la campaña de Samper había sido patrocinada por el Cartel de Cali, no le quedó otro remedio que perseguirlos sin cuartel, uno a uno fueron cayendo los grandes jefes de Cali, el primero fue José Santacruz Londoño, quien fue detenido en un restaurante ubicado al Norte de Bogotá, el segundo en caer fue Gilberto Rodríguez Orejuela en junio de 1995 en un apartamento de su propiedad, en agosto de ese mismo año fue capturado Miguel Rodríguez Orejuela.</p>
+                
+<!--                <img src="/MemoriasHistoricas-web/resources/images/grupos/FARC.png" />-->
+            </div>
+            
+        </div>
+    </ui:define>
+</ui:composition>

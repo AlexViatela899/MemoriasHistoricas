@@ -18,7 +18,7 @@
                                 <input id="s5" class="sheet" type="radio" name="slide1"/>
                                 <ul>
                                     <li class="tab">
-                                        <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
+                                        <img src="/MemoriasHistoricas-web/resources/images/logo.png" style="width: 95%;"/>
                                     </li>
 
                                     <li class="tab">
@@ -53,10 +53,10 @@
 
         </div>
     </div>
-    <div style="background-color: #fff;height: 100%">
+    <div style="background-color: transparent;height: 100%">
         <br/>
         <div style="margin-left: 35%; margin-right: 22%">
-            <div class="cajon ejemplo-1">
+            <div class="cajon ejemplo-1" style="border-bottom:#006 solid 4px">
                 <img src="/MemoriasHistoricas-web/resources/images/logo.png" />
                 <div class="mascara">
                     <h2>Módulo Aprendizaje</h2>
@@ -64,10 +64,10 @@
                     <h:commandLink class="link" rendered="#{menuMemoriasHistoricasBean.isUserInRole('MHUAPR')}" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="Recorrido" action="mapa" immediate="true">Ir</h:commandLink>
                 </div>
             </div>
-            <div class="cajon ejemplo-6">
-                <img src="/MemoriasHistoricas-web/resources/images/logo.png"/>
+            <div class="cajon ejemplo-6" style="border-bottom:#006 solid 4px">
+                <h3 style="margin-top: 25%;">Valoración</h3>
                 <div class="mascara">
-                    <h2>Gestion</h2>
+                    <h2>Valoración</h2>
                     <p>Gestion</p>
                     <h:commandLink class="link" rendered="#{menuMemoriasHistoricasBean.isUserInRole('MHUADM')}" style="font-family:Arial, Helvetica, sans-serif; font-size:1em;" title="GESTION" action="#{menuMemoriasHistoricasBean.irMenu('GESTION')}" immediate="true">Ir</h:commandLink>
                 </div>
