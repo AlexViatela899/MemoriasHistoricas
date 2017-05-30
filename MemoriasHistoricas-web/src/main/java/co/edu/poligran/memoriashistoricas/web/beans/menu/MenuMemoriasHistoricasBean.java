@@ -55,53 +55,53 @@ public class MenuMemoriasHistoricasBean implements Serializable {
                                 .getDescription());
                 return "mapa";
             case FARC:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.FARC
                         .getDescription());
                 return "grupo1";
             case AUC:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.AUC
                         .getDescription());
                 return "grupo2";
             case CCALI:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.CCALI
                         .getDescription());
                 return "grupo3";
             case CMEDELLIN:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.CMEDELLIN
                         .getDescription());
                 return "grupo4";    
             case ELN:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.ELN
                         .getDescription());
                 return "grupo5";    
             case ERPAC:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.ERPAC
                         .getDescription());
                 return "grupo6";    
             case M19:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.M19
                         .getDescription());
                 return "grupo7";    
             case RASTROJOS:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.RASTROJOS
                         .getDescription());
                 return "grupo8";    
             case URABENOS:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.URABENOS
                         .getDescription());
                 return "grupo9";    
                 
             case GPARM:
-                inicioSesionBean.setMenu(
+                loginBean.setMenu(
                         ConstantesMemoriasHistoricas.ITEM_MENU.GPARM
                         .getDescription());
                 return "grupos"; 

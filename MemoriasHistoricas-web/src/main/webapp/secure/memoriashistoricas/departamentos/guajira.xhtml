@@ -1,0 +1,37 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="/secure/memoriashistoricas/template/template.xhtml"
+                xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <ui:define name="content">
+    <div style="background-color:transparent;height: 100%; width: 800px; margin-left: 25%;">
+            <br/>
+            <div style="margin-left: 0%; margin-right: 0%;">
+                <div class="cajon ejemplo-1">
+                    <img src="/MemoriasHistoricas-web/resources/images/departamentos/masacre.png" />
+                    <div class="mascara">
+                        <br/>
+                        <h2>MASACRES</h2>
+                        <a title="Masacres" jsf:action="#{menuMemoriasHistoricasBean.irMenu('FARC')}"><p style="cursor: pointer;">Mas Información.</p></a>
+                    </div>
+                </div>
+                <div class="cajon ejemplo-1">
+                    <img src="/MemoriasHistoricas-web/resources/images/departamentos/grup.png" />
+                    <div class="mascara">
+                        <br/>
+                        <h2>GRUPOS ARMADOS</h2>
+                        <a title="Grupos Armados" jsf:action="#{menuMemoriasHistoricasBean.irMenu('AUC')}"><p style="cursor: pointer;">Mas Información.</p></a>
+                    </div>
+                </div>
+                <div class="cajon ejemplo-1">
+                    <img src="/MemoriasHistoricas-web/resources/images/departamentos/evaluacion.png" />
+                    <div class="mascara">
+                        <br/>
+                        <h2>EVALUACIÓNi</h2>
+                        <a title="Evaluación" jsf:action="#{menuMemoriasHistoricasBean.irMenu('CCALI')}"><p style="cursor: pointer;">Mas Información.</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>			
