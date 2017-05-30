@@ -50,7 +50,7 @@ public class LoginBean implements Serializable {
     }
     
     public String autenticar() {
-        String login = "loginFalla";
+        String login = null;
         if (!autenticado) {
             ResultadoOperacion resultado = new ResultadoOperacion();
             usuario = new Usuario();
@@ -95,7 +95,10 @@ public class LoginBean implements Serializable {
                 }
 
             } else {
-                login = "loginFalla";
+                FacesContext.getCurrentInstance().addMessage(null,
+                        new FacesMessage(FacesMessage.SEVERITY_ERROR,
+                                "Usuario y contraseña no pueden estar vacíos.",
+                                ""));
                 return login;
             }
         }

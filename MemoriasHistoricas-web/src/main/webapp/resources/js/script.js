@@ -42,7 +42,7 @@ function addZero(i) {
     v = v.substr(v.length - 2);
     return v;
 }
- 
+
 
 function myFunction() {
     var d = new Date();
@@ -63,23 +63,23 @@ function myProces()
 function cronometro() {
     contador = parseInt(document.getElementById("formMemoriasHistoricas").value);
     var d = new Date(contador);
-    var h = addZero(d.getHours()-19);
+    var h = addZero(d.getHours() - 19);
     var m = addZero(d.getMinutes());
     var s = addZero(d.getSeconds());
     var tiempo = h + ":" + m + ":" + s;
     document.getElementById("formMemoriasHistoricas").value = tiempo;
-    contador+=1000;
+    contador += 1000;
     document.getElementById("formMemoriasHistoricas").value = contador;
     paraCronometro = setTimeout("cronometro()", 1000);
 }
 
-function detenerCronometro(){
+function detenerCronometro() {
     clearTimeout(paraCronometro);
 }
 
-(function($) {
-    $(document).ready(function() {
-        $('nav > ul > li > a').click(function() {
+(function ($) {
+    $(document).ready(function () {
+        $('nav > ul > li > a').click(function () {
             $('nav li').removeClass('active');
             $(this).closest('li').addClass('active');
             var checkElement = $(this).next();
@@ -97,7 +97,7 @@ function detenerCronometro(){
                 return false;
             }
         });
-        $('nav > ul > li > ul > li > a').click(function() {
+        $('nav > ul > li > ul > li > a').click(function () {
             $('nav li ul li').removeClass('active');
             $(this).closest('li').addClass('active');
             var checkElement = $(this).next();
@@ -116,9 +116,26 @@ function detenerCronometro(){
             }
         });
     });
-    
+
 })($);
 
 window.addEventListener("beforeunload", function (e) {
-  divBlock();
+    divBlock();
 });
+
+function initDialog() {
+    debugger;
+    $("#toolTipPanel").dialog({
+        autoOpen: true,
+        title: "Registro de usuario",
+        resizable : false,
+        width: 550,
+        heigth: 400,
+        modal: true,
+        buttons: {
+            Cancelar: function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+}

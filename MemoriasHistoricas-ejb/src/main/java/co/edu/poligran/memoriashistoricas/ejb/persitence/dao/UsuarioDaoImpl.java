@@ -44,4 +44,9 @@ public class UsuarioDaoImpl {
         query.setParameter("correoElectronico", usuarioCorreo);
         return (Usuario) query.getSingleResult();
     }
+    
+    public Usuario registrarUsuario(Usuario usuario) {
+        em.persist(usuario);
+        return usuario;
+    }
 }

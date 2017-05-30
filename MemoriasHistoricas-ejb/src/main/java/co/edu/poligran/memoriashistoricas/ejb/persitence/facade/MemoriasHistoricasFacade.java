@@ -48,4 +48,9 @@ public class MemoriasHistoricasFacade implements MemoriasHistoricasFacadeLocal {
     public List<String> obtenerRolesUsuario(String usuarioCorreo) {
         return memoriasHistoricasManager.obtenerRolesUsuario(usuarioCorreo);
     }
+
+    @Override
+    public ResultadoOperacion registrarUsuario(Usuario usuario) {
+        return memoriasHistoricasManager.registrarUsuario(usuario);
+    }
 }

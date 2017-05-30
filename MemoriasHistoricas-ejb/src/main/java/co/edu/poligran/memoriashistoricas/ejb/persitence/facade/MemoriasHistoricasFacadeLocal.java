@@ -23,5 +23,7 @@ public interface MemoriasHistoricasFacadeLocal {
             String clave, String nuevaClave);
     
     public List<String> obtenerRolesUsuario(String usuarioCorreo);
+    
+    public ResultadoOperacion registrarUsuario(Usuario usuario);
 
 }

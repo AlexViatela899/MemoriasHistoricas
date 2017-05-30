@@ -26,14 +26,19 @@
             </p>
             <br/>
             <p style="text-align: center">
-                <h:commandLink style="color: #FFFFFF" value="Cambiar contraseña"
-                               action="cambiarClave"/>
+                <h:commandLink 
+                    style="color: #FFFFFF" value="Cambiar contraseña"
+                    action="cambiarClave"/>
             </p>
             <br/>
-            <p><h:commandButton value="Ingresar"
-                                action="#{loginBean.autenticar}"/></p>
-            <p><h:commandButton value="Registrarse"
-                                action="registrarse"/></p>
+            <p><h:commandButton 
+                    value="Ingresar"
+                    action="#{loginBean.autenticar}"/></p>
+            <p><h:commandButton 
+                    id="registrarse"
+                    immediate="true"
+                    value="Registrarse" 
+                    action="registro"/></p>
         </fieldset>
     </ui:define>
 </ui:composition>
